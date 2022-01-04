@@ -90,6 +90,7 @@ public class CAEXObjectImpl extends CAEXBasicObjectImpl implements CAEXObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getID() {
 		return iD;
 	}
@@ -99,6 +100,7 @@ public class CAEXObjectImpl extends CAEXBasicObjectImpl implements CAEXObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setID(String newID) {
 		String oldID = iD;
 		iD = newID;
@@ -111,6 +113,7 @@ public class CAEXObjectImpl extends CAEXBasicObjectImpl implements CAEXObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -120,6 +123,7 @@ public class CAEXObjectImpl extends CAEXBasicObjectImpl implements CAEXObject {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -204,7 +208,7 @@ public class CAEXObjectImpl extends CAEXBasicObjectImpl implements CAEXObject {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (iD: ");
 		result.append(iD);
 		result.append(", name: ");

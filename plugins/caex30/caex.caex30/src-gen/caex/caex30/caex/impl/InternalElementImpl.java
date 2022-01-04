@@ -102,6 +102,7 @@ public class InternalElementImpl extends SystemUnitClassImpl implements Internal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RoleRequirements> getRoleRequirements() {
 		if (roleRequirements == null) {
 			roleRequirements = new EObjectContainmentEList<RoleRequirements>(RoleRequirements.class, this, CAEXPackage.INTERNAL_ELEMENT__ROLE_REQUIREMENTS);
@@ -114,6 +115,7 @@ public class InternalElementImpl extends SystemUnitClassImpl implements Internal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRefBaseSystemUnitPath() {
 		return refBaseSystemUnitPath;
 	}
@@ -123,6 +125,7 @@ public class InternalElementImpl extends SystemUnitClassImpl implements Internal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefBaseSystemUnitPath(String newRefBaseSystemUnitPath) {
 		String oldRefBaseSystemUnitPath = refBaseSystemUnitPath;
 		refBaseSystemUnitPath = newRefBaseSystemUnitPath;
@@ -135,6 +138,7 @@ public class InternalElementImpl extends SystemUnitClassImpl implements Internal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemUnitClass getBaseSystemUnit() {
 		if (baseSystemUnit != null && baseSystemUnit.eIsProxy()) {
 			InternalEObject oldBaseSystemUnit = (InternalEObject)baseSystemUnit;
@@ -161,6 +165,7 @@ public class InternalElementImpl extends SystemUnitClassImpl implements Internal
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBaseSystemUnit(SystemUnitClass newBaseSystemUnit) {
 		SystemUnitClass oldBaseSystemUnit = baseSystemUnit;
 		baseSystemUnit = newBaseSystemUnit;
@@ -272,7 +277,7 @@ public class InternalElementImpl extends SystemUnitClassImpl implements Internal
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (refBaseSystemUnitPath: ");
 		result.append(refBaseSystemUnitPath);
 		result.append(')');

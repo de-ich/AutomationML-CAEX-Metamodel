@@ -35,6 +35,7 @@ public interface NominalScaled extends EObject {
 	 * @return the value of the '<em>Required Value</em>' attribute list.
 	 * @see caex.caex30.caex.CAEXPackage#getNominalScaled_RequiredValue()
 	 * @model unique="false" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='RequiredValue' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<String> getRequiredValue();

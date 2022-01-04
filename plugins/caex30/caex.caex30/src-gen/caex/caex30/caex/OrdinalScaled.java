@@ -35,6 +35,7 @@ public interface OrdinalScaled extends EObject {
 	 * @see #setRequiredMaxValue(String)
 	 * @see caex.caex30.caex.CAEXPackage#getOrdinalScaled_RequiredMaxValue()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='RequiredMaxValue' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRequiredMaxValue();
@@ -61,6 +62,7 @@ public interface OrdinalScaled extends EObject {
 	 * @see #setRequiredValue(String)
 	 * @see caex.caex30.caex.CAEXPackage#getOrdinalScaled_RequiredValue()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='RequiredValue' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRequiredValue();
@@ -87,6 +89,7 @@ public interface OrdinalScaled extends EObject {
 	 * @see #setRequiredMinValue(String)
 	 * @see caex.caex30.caex.CAEXPackage#getOrdinalScaled_RequiredMinValue()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='element' name='RequiredMinValue' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRequiredMinValue();

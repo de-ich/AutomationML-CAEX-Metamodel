@@ -124,6 +124,7 @@ public class RoleClassImpl extends CAEXObjectImpl implements RoleClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getAttribute() {
 		if (attribute == null) {
 			attribute = new EObjectContainmentEList<Attribute>(Attribute.class, this, CAEXPackage.ROLE_CLASS__ATTRIBUTE);
@@ -136,6 +137,7 @@ public class RoleClassImpl extends CAEXObjectImpl implements RoleClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExternalInterface> getExternalInterface() {
 		if (externalInterface == null) {
 			externalInterface = new EObjectContainmentEList<ExternalInterface>(ExternalInterface.class, this, CAEXPackage.ROLE_CLASS__EXTERNAL_INTERFACE);
@@ -148,6 +150,7 @@ public class RoleClassImpl extends CAEXObjectImpl implements RoleClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRefBaseClassPath() {
 		return refBaseClassPath;
 	}
@@ -157,6 +160,7 @@ public class RoleClassImpl extends CAEXObjectImpl implements RoleClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefBaseClassPath(String newRefBaseClassPath) {
 		String oldRefBaseClassPath = refBaseClassPath;
 		refBaseClassPath = newRefBaseClassPath;
@@ -169,6 +173,7 @@ public class RoleClassImpl extends CAEXObjectImpl implements RoleClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RoleClass getBaseClass() {
 		if (baseClass != null && baseClass.eIsProxy()) {
 			InternalEObject oldBaseClass = (InternalEObject)baseClass;
@@ -195,6 +200,7 @@ public class RoleClassImpl extends CAEXObjectImpl implements RoleClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBaseClass(RoleClass newBaseClass) {
 		RoleClass oldBaseClass = baseClass;
 		baseClass = newBaseClass;
@@ -207,6 +213,7 @@ public class RoleClassImpl extends CAEXObjectImpl implements RoleClass {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RoleClass> getRoleClass() {
 		if (roleClass == null) {
 			roleClass = new EObjectContainmentEList<RoleClass>(RoleClass.class, this, CAEXPackage.ROLE_CLASS__ROLE_CLASS);
@@ -344,7 +351,7 @@ public class RoleClassImpl extends CAEXObjectImpl implements RoleClass {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (refBaseClassPath: ");
 		result.append(refBaseClassPath);
 		result.append(')');

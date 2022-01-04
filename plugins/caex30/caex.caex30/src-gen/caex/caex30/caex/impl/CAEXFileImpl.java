@@ -204,6 +204,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getSuperiorStandardVersion() {
 		if (superiorStandardVersion == null) {
 			superiorStandardVersion = new EDataTypeEList<String>(String.class, this, CAEXPackage.CAEX_FILE__SUPERIOR_STANDARD_VERSION);
@@ -216,6 +217,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SourceDocumentInformation> getSourceDocumentInformation() {
 		if (sourceDocumentInformation == null) {
 			sourceDocumentInformation = new EObjectContainmentEList<SourceDocumentInformation>(SourceDocumentInformation.class, this, CAEXPackage.CAEX_FILE__SOURCE_DOCUMENT_INFORMATION);
@@ -228,6 +230,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExternalReference> getExternalReference() {
 		if (externalReference == null) {
 			externalReference = new EObjectContainmentEList<ExternalReference>(ExternalReference.class, this, CAEXPackage.CAEX_FILE__EXTERNAL_REFERENCE);
@@ -240,6 +243,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InstanceHierarchy> getInstanceHierarchy() {
 		if (instanceHierarchy == null) {
 			instanceHierarchy = new EObjectContainmentEList<InstanceHierarchy>(InstanceHierarchy.class, this, CAEXPackage.CAEX_FILE__INSTANCE_HIERARCHY);
@@ -252,6 +256,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceClassLib> getInterfaceClassLib() {
 		if (interfaceClassLib == null) {
 			interfaceClassLib = new EObjectContainmentEList<InterfaceClassLib>(InterfaceClassLib.class, this, CAEXPackage.CAEX_FILE__INTERFACE_CLASS_LIB);
@@ -264,6 +269,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RoleClassLib> getRoleClassLib() {
 		if (roleClassLib == null) {
 			roleClassLib = new EObjectContainmentEList<RoleClassLib>(RoleClassLib.class, this, CAEXPackage.CAEX_FILE__ROLE_CLASS_LIB);
@@ -276,6 +282,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SystemUnitClassLib> getSystemUnitClassLib() {
 		if (systemUnitClassLib == null) {
 			systemUnitClassLib = new EObjectContainmentEList<SystemUnitClassLib>(SystemUnitClassLib.class, this, CAEXPackage.CAEX_FILE__SYSTEM_UNIT_CLASS_LIB);
@@ -288,6 +295,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AttributeLib> getAttributeTypeLib() {
 		if (attributeTypeLib == null) {
 			attributeTypeLib = new EObjectContainmentEList<AttributeLib>(AttributeLib.class, this, CAEXPackage.CAEX_FILE__ATTRIBUTE_TYPE_LIB);
@@ -300,6 +308,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFileName() {
 		return fileName;
 	}
@@ -309,6 +318,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFileName(String newFileName) {
 		String oldFileName = fileName;
 		fileName = newFileName;
@@ -321,6 +331,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSchemaVersion() {
 		return schemaVersion;
 	}
@@ -330,6 +341,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSchemaVersion(String newSchemaVersion) {
 		String oldSchemaVersion = schemaVersion;
 		schemaVersion = newSchemaVersion;
@@ -344,6 +356,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetSchemaVersion() {
 		String oldSchemaVersion = schemaVersion;
 		boolean oldSchemaVersionESet = schemaVersionESet;
@@ -358,6 +371,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetSchemaVersion() {
 		return schemaVersionESet;
 	}
@@ -554,7 +568,7 @@ public class CAEXFileImpl extends CAEXBasicObjectImpl implements CAEXFile {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (superiorStandardVersion: ");
 		result.append(superiorStandardVersion);
 		result.append(", fileName: ");

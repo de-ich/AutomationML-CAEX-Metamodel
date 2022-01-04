@@ -5,16 +5,38 @@ package caex.caex30.caex.impl;
 import caex.caex30.caex.AttributeFamily;
 import caex.caex30.caex.CAEXPackage;
 
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Attribute Family</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link caex.caex30.caex.impl.AttributeFamilyImpl#getAttributeType <em>Attribute Type</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class AttributeFamilyImpl extends AttributeImpl implements AttributeFamily {
+	/**
+	 * The cached value of the '{@link #getAttributeType() <em>Attribute Type</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAttributeType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AttributeFamily> attributeType;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -32,6 +54,93 @@ public class AttributeFamilyImpl extends AttributeImpl implements AttributeFamil
 	@Override
 	protected EClass eStaticClass() {
 		return CAEXPackage.Literals.ATTRIBUTE_FAMILY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<AttributeFamily> getAttributeType() {
+		if (attributeType == null) {
+			attributeType = new EObjectContainmentEList<AttributeFamily>(AttributeFamily.class, this, CAEXPackage.ATTRIBUTE_FAMILY__ATTRIBUTE_TYPE);
+		}
+		return attributeType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case CAEXPackage.ATTRIBUTE_FAMILY__ATTRIBUTE_TYPE:
+				return ((InternalEList<?>)getAttributeType()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case CAEXPackage.ATTRIBUTE_FAMILY__ATTRIBUTE_TYPE:
+				return getAttributeType();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case CAEXPackage.ATTRIBUTE_FAMILY__ATTRIBUTE_TYPE:
+				getAttributeType().clear();
+				getAttributeType().addAll((Collection<? extends AttributeFamily>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case CAEXPackage.ATTRIBUTE_FAMILY__ATTRIBUTE_TYPE:
+				getAttributeType().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case CAEXPackage.ATTRIBUTE_FAMILY__ATTRIBUTE_TYPE:
+				return attributeType != null && !attributeType.isEmpty();
+		}
+		return super.eIsSet(featureID);
 	}
 
 } //AttributeFamilyImpl

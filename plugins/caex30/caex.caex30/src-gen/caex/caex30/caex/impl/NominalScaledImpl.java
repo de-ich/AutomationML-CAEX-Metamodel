@@ -63,6 +63,7 @@ public class NominalScaledImpl extends MinimalEObjectImpl.Container implements N
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getRequiredValue() {
 		if (requiredValue == null) {
 			requiredValue = new EDataTypeEList<String>(String.class, this, CAEXPackage.NOMINAL_SCALED__REQUIRED_VALUE);
@@ -139,7 +140,7 @@ public class NominalScaledImpl extends MinimalEObjectImpl.Container implements N
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (requiredValue: ");
 		result.append(requiredValue);
 		result.append(')');

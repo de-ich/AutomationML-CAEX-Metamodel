@@ -94,6 +94,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FeatureMap getMixed() {
 		if (mixed == null) {
 			mixed = new BasicFeatureMap(this, CAEXPackage.DOCUMENT_ROOT__MIXED);
@@ -106,6 +107,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EMap<String, String> getXMLNSPrefixMap() {
 		if (xMLNSPrefixMap == null) {
 			xMLNSPrefixMap = new EcoreEMap<String,String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, CAEXPackage.DOCUMENT_ROOT__XMLNS_PREFIX_MAP);
@@ -118,6 +120,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EMap<String, String> getXSISchemaLocation() {
 		if (xSISchemaLocation == null) {
 			xSISchemaLocation = new EcoreEMap<String,String>(EcorePackage.Literals.ESTRING_TO_STRING_MAP_ENTRY, EStringToStringMapEntryImpl.class, this, CAEXPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION);
@@ -130,6 +133,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CAEXFile getCAEXFile() {
 		return (CAEXFile)getMixed().get(CAEXPackage.Literals.DOCUMENT_ROOT__CAEX_FILE, true);
 	}
@@ -148,6 +152,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCAEXFile(CAEXFile newCAEXFile) {
 		((FeatureMap.Internal)getMixed()).set(CAEXPackage.Literals.DOCUMENT_ROOT__CAEX_FILE, newCAEXFile);
 	}
@@ -272,7 +277,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (mixed: ");
 		result.append(mixed);
 		result.append(')');

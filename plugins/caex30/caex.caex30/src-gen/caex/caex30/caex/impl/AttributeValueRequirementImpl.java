@@ -107,6 +107,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OrdinalScaled getOrdinalScaledType() {
 		return ordinalScaledType;
 	}
@@ -131,6 +132,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrdinalScaledType(OrdinalScaled newOrdinalScaledType) {
 		if (newOrdinalScaledType != ordinalScaledType) {
 			NotificationChain msgs = null;
@@ -150,6 +152,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NominalScaled getNominalScaledType() {
 		return nominalScaledType;
 	}
@@ -174,6 +177,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNominalScaledType(NominalScaled newNominalScaledType) {
 		if (newNominalScaledType != nominalScaledType) {
 			NotificationChain msgs = null;
@@ -193,6 +197,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnknownType getUnknownType() {
 		return unknownType;
 	}
@@ -217,6 +222,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnknownType(UnknownType newUnknownType) {
 		if (newUnknownType != unknownType) {
 			NotificationChain msgs = null;
@@ -236,6 +242,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -245,6 +252,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -367,7 +375,7 @@ public class AttributeValueRequirementImpl extends CAEXBasicObjectImpl implement
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

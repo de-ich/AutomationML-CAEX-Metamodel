@@ -126,6 +126,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getAttribute() {
 		if (attribute == null) {
 			attribute = new EObjectContainmentEList<Attribute>(Attribute.class, this, CAEXPackage.ROLE_REQUIREMENTS__ATTRIBUTE);
@@ -138,6 +139,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceClass> getExternalInterface() {
 		if (externalInterface == null) {
 			externalInterface = new EObjectContainmentEList<InterfaceClass>(InterfaceClass.class, this, CAEXPackage.ROLE_REQUIREMENTS__EXTERNAL_INTERFACE);
@@ -150,6 +152,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Mapping getMappingObject() {
 		return mappingObject;
 	}
@@ -174,6 +177,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMappingObject(Mapping newMappingObject) {
 		if (newMappingObject != mappingObject) {
 			NotificationChain msgs = null;
@@ -193,6 +197,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RoleClass getRoleClass() {
 		if (roleClass != null && roleClass.eIsProxy()) {
 			InternalEObject oldRoleClass = (InternalEObject)roleClass;
@@ -219,6 +224,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoleClass(RoleClass newRoleClass) {
 		RoleClass oldRoleClass = roleClass;
 		roleClass = newRoleClass;
@@ -231,6 +237,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRefBaseRoleClassPath() {
 		return refBaseRoleClassPath;
 	}
@@ -240,6 +247,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefBaseRoleClassPath(String newRefBaseRoleClassPath) {
 		String oldRefBaseRoleClassPath = refBaseRoleClassPath;
 		refBaseRoleClassPath = newRefBaseRoleClassPath;
@@ -376,7 +384,7 @@ public class RoleRequirementsImpl extends CAEXBasicObjectImpl implements RoleReq
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (refBaseRoleClassPath: ");
 		result.append(refBaseRoleClassPath);
 		result.append(')');

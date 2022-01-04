@@ -90,6 +90,7 @@ public class ExternalReferenceImpl extends CAEXBasicObjectImpl implements Extern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAlias() {
 		return alias;
 	}
@@ -99,6 +100,7 @@ public class ExternalReferenceImpl extends CAEXBasicObjectImpl implements Extern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlias(String newAlias) {
 		String oldAlias = alias;
 		alias = newAlias;
@@ -111,6 +113,7 @@ public class ExternalReferenceImpl extends CAEXBasicObjectImpl implements Extern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPath() {
 		return path;
 	}
@@ -120,6 +123,7 @@ public class ExternalReferenceImpl extends CAEXBasicObjectImpl implements Extern
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPath(String newPath) {
 		String oldPath = path;
 		path = newPath;
@@ -204,7 +208,7 @@ public class ExternalReferenceImpl extends CAEXBasicObjectImpl implements Extern
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (alias: ");
 		result.append(alias);
 		result.append(", path: ");

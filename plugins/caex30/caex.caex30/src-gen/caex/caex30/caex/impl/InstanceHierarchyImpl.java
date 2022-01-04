@@ -66,6 +66,7 @@ public class InstanceHierarchyImpl extends CAEXObjectImpl implements InstanceHie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InternalElement> getInternalElement() {
 		if (internalElement == null) {
 			internalElement = new EObjectContainmentEList<InternalElement>(InternalElement.class, this, CAEXPackage.INSTANCE_HIERARCHY__INTERNAL_ELEMENT);

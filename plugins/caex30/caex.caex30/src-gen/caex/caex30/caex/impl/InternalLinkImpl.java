@@ -114,6 +114,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRefPartnerSideA() {
 		return refPartnerSideA;
 	}
@@ -123,6 +124,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefPartnerSideA(String newRefPartnerSideA) {
 		String oldRefPartnerSideA = refPartnerSideA;
 		refPartnerSideA = newRefPartnerSideA;
@@ -135,6 +137,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRefPartnerSideB() {
 		return refPartnerSideB;
 	}
@@ -144,6 +147,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefPartnerSideB(String newRefPartnerSideB) {
 		String oldRefPartnerSideB = refPartnerSideB;
 		refPartnerSideB = newRefPartnerSideB;
@@ -156,6 +160,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceClass getPartnerSideA() {
 		if (partnerSideA != null && partnerSideA.eIsProxy()) {
 			InternalEObject oldPartnerSideA = (InternalEObject)partnerSideA;
@@ -182,6 +187,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartnerSideA(InterfaceClass newPartnerSideA) {
 		InterfaceClass oldPartnerSideA = partnerSideA;
 		partnerSideA = newPartnerSideA;
@@ -194,6 +200,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceClass getPartnerSideB() {
 		if (partnerSideB != null && partnerSideB.eIsProxy()) {
 			InternalEObject oldPartnerSideB = (InternalEObject)partnerSideB;
@@ -220,6 +227,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartnerSideB(InterfaceClass newPartnerSideB) {
 		InterfaceClass oldPartnerSideB = partnerSideB;
 		partnerSideB = newPartnerSideB;
@@ -326,7 +334,7 @@ public class InternalLinkImpl extends CAEXObjectImpl implements InternalLink {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (refPartnerSideA: ");
 		result.append(refPartnerSideA);
 		result.append(", refPartnerSideB: ");

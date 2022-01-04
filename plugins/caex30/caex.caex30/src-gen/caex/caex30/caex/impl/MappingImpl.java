@@ -78,6 +78,7 @@ public class MappingImpl extends CAEXBasicObjectImpl implements Mapping {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AttributeNameMapping> getAttributeNameMapping() {
 		if (attributeNameMapping == null) {
 			attributeNameMapping = new EObjectContainmentEList<AttributeNameMapping>(AttributeNameMapping.class, this, CAEXPackage.MAPPING__ATTRIBUTE_NAME_MAPPING);
@@ -90,6 +91,7 @@ public class MappingImpl extends CAEXBasicObjectImpl implements Mapping {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceIDMapping> getInterfaceIDMapping() {
 		if (interfaceIDMapping == null) {
 			interfaceIDMapping = new EObjectContainmentEList<InterfaceIDMapping>(InterfaceIDMapping.class, this, CAEXPackage.MAPPING__INTERFACE_ID_MAPPING);

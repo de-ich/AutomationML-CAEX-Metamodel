@@ -240,6 +240,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XMLGregorianCalendar getLastWritingDateTime() {
 		return lastWritingDateTime;
 	}
@@ -249,6 +250,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLastWritingDateTime(XMLGregorianCalendar newLastWritingDateTime) {
 		XMLGregorianCalendar oldLastWritingDateTime = lastWritingDateTime;
 		lastWritingDateTime = newLastWritingDateTime;
@@ -261,6 +263,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginID() {
 		return originID;
 	}
@@ -270,6 +273,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginID(String newOriginID) {
 		String oldOriginID = originID;
 		originID = newOriginID;
@@ -282,6 +286,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginName() {
 		return originName;
 	}
@@ -291,6 +296,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginName(String newOriginName) {
 		String oldOriginName = originName;
 		originName = newOriginName;
@@ -303,6 +309,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginProjectID() {
 		return originProjectID;
 	}
@@ -312,6 +319,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginProjectID(String newOriginProjectID) {
 		String oldOriginProjectID = originProjectID;
 		originProjectID = newOriginProjectID;
@@ -324,6 +332,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginProjectTitle() {
 		return originProjectTitle;
 	}
@@ -333,6 +342,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginProjectTitle(String newOriginProjectTitle) {
 		String oldOriginProjectTitle = originProjectTitle;
 		originProjectTitle = newOriginProjectTitle;
@@ -345,6 +355,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginRelease() {
 		return originRelease;
 	}
@@ -354,6 +365,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginRelease(String newOriginRelease) {
 		String oldOriginRelease = originRelease;
 		originRelease = newOriginRelease;
@@ -366,6 +378,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginVendor() {
 		return originVendor;
 	}
@@ -375,6 +388,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginVendor(String newOriginVendor) {
 		String oldOriginVendor = originVendor;
 		originVendor = newOriginVendor;
@@ -387,6 +401,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginVendorURL() {
 		return originVendorURL;
 	}
@@ -396,6 +411,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginVendorURL(String newOriginVendorURL) {
 		String oldOriginVendorURL = originVendorURL;
 		originVendorURL = newOriginVendorURL;
@@ -408,6 +424,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOriginVersion() {
 		return originVersion;
 	}
@@ -417,6 +434,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOriginVersion(String newOriginVersion) {
 		String oldOriginVersion = originVersion;
 		originVersion = newOriginVersion;
@@ -571,7 +589,7 @@ public class SourceDocumentInformationImpl extends MinimalEObjectImpl.Container 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (lastWritingDateTime: ");
 		result.append(lastWritingDateTime);
 		result.append(", originID: ");

@@ -588,13 +588,22 @@ public interface CAEXPackage extends EPackage {
 	int ATTRIBUTE_FAMILY__REFERENCE_ATTRIBUTE = ATTRIBUTE__REFERENCE_ATTRIBUTE;
 
 	/**
+	 * The feature id for the '<em><b>Attribute Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_FAMILY__ATTRIBUTE_TYPE = ATTRIBUTE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Attribute Family</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ATTRIBUTE_FAMILY_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 0;
+	int ATTRIBUTE_FAMILY_FEATURE_COUNT = ATTRIBUTE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Attribute Family</em>' class.
@@ -4298,6 +4307,17 @@ public interface CAEXPackage extends EPackage {
 	EClass getAttributeFamily();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link caex.caex30.caex.AttributeFamily#getAttributeType <em>Attribute Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attribute Type</em>'.
+	 * @see caex.caex30.caex.AttributeFamily#getAttributeType()
+	 * @see #getAttributeFamily()
+	 * @generated
+	 */
+	EReference getAttributeFamily_AttributeType();
+
+	/**
 	 * Returns the meta object for class '{@link caex.caex30.caex.AttributeNameMapping <em>Attribute Name Mapping</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5944,6 +5964,14 @@ public interface CAEXPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ATTRIBUTE_FAMILY = eINSTANCE.getAttributeFamily();
+
+		/**
+		 * The meta object literal for the '<em><b>Attribute Type</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE_FAMILY__ATTRIBUTE_TYPE = eINSTANCE.getAttributeFamily_AttributeType();
 
 		/**
 		 * The meta object literal for the '{@link caex.caex30.caex.impl.AttributeNameMappingImpl <em>Attribute Name Mapping</em>}' class.

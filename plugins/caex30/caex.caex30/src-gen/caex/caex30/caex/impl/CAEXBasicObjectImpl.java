@@ -149,6 +149,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChangeMode getChangeMode() {
 		return changeMode;
 	}
@@ -158,6 +159,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChangeMode(ChangeMode newChangeMode) {
 		ChangeMode oldChangeMode = changeMode;
 		changeMode = newChangeMode == null ? CHANGE_MODE_EDEFAULT : newChangeMode;
@@ -172,6 +174,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetChangeMode() {
 		ChangeMode oldChangeMode = changeMode;
 		boolean oldChangeModeESet = changeModeESet;
@@ -186,6 +189,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetChangeMode() {
 		return changeModeESet;
 	}
@@ -195,6 +199,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Description getDescription() {
 		return description;
 	}
@@ -219,6 +224,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescription(Description newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
@@ -238,6 +244,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Version getVersion() {
 		return version;
 	}
@@ -262,6 +269,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVersion(Version newVersion) {
 		if (newVersion != version) {
 			NotificationChain msgs = null;
@@ -281,6 +289,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Revision> getRevision() {
 		if (revision == null) {
 			revision = new EObjectContainmentEList<Revision>(Revision.class, this, CAEXPackage.CAEX_BASIC_OBJECT__REVISION);
@@ -293,6 +302,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Copyright getCopyright() {
 		return copyright;
 	}
@@ -317,6 +327,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCopyright(Copyright newCopyright) {
 		if (newCopyright != copyright) {
 			NotificationChain msgs = null;
@@ -336,6 +347,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AdditionalInformation> getAdditionalInformation() {
 		if (additionalInformation == null) {
 			additionalInformation = new EObjectContainmentEList<AdditionalInformation>(AdditionalInformation.class, this, CAEXPackage.CAEX_BASIC_OBJECT__ADDITIONAL_INFORMATION);
@@ -485,7 +497,7 @@ public class CAEXBasicObjectImpl extends MinimalEObjectImpl.Container implements
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (changeMode: ");
 		if (changeModeESet) result.append(changeMode); else result.append("<unset>");
 		result.append(')');

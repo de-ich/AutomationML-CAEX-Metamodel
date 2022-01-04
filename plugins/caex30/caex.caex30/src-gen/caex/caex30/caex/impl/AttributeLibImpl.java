@@ -2,7 +2,7 @@
  */
 package caex.caex30.caex.impl;
 
-import caex.caex30.caex.Attribute;
+import caex.caex30.caex.AttributeFamily;
 import caex.caex30.caex.AttributeLib;
 import caex.caex30.caex.CAEXPackage;
 
@@ -40,7 +40,7 @@ public class AttributeLibImpl extends CAEXObjectImpl implements AttributeLib {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Attribute> attributeType;
+	protected EList<AttributeFamily> attributeType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,9 +66,10 @@ public class AttributeLibImpl extends CAEXObjectImpl implements AttributeLib {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Attribute> getAttributeType() {
+	@Override
+	public EList<AttributeFamily> getAttributeType() {
 		if (attributeType == null) {
-			attributeType = new EObjectContainmentEList<Attribute>(Attribute.class, this, CAEXPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE);
+			attributeType = new EObjectContainmentEList<AttributeFamily>(AttributeFamily.class, this, CAEXPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE);
 		}
 		return attributeType;
 	}
@@ -112,7 +113,7 @@ public class AttributeLibImpl extends CAEXObjectImpl implements AttributeLib {
 		switch (featureID) {
 			case CAEXPackage.ATTRIBUTE_LIB__ATTRIBUTE_TYPE:
 				getAttributeType().clear();
-				getAttributeType().addAll((Collection<? extends Attribute>)newValue);
+				getAttributeType().addAll((Collection<? extends AttributeFamily>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
