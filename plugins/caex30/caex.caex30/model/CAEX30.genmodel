@@ -16,7 +16,9 @@
     </genEnums>
     <genDataTypes ecoreDataType="CAEX30.ecore#//AttributeDataType"/>
     <genDataTypes ecoreDataType="CAEX30.ecore#//ChangeModeObject"/>
-    <genClasses ecoreClass="CAEX30.ecore#//AttributeFamily"/>
+    <genClasses ecoreClass="CAEX30.ecore#//AttributeFamily">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CAEX30.ecore#//AttributeFamily/attributeType"/>
+    </genClasses>
     <genClasses ecoreClass="CAEX30.ecore#//AttributeNameMapping">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CAEX30.ecore#//AttributeNameMapping/roleAttributeName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CAEX30.ecore#//AttributeNameMapping/systemUnitAttributeName"/>
