@@ -187,6 +187,7 @@ public interface SystemUnitClass extends CAEXObject {
 	 * @see #setRefBaseClassPath(String)
 	 * @see caex.caex30.caex.CAEXPackage#getSystemUnitClass_RefBaseClassPath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='RefBaseClassPath'"
 	 * @generated
 	 */
 	String getRefBaseClassPath();

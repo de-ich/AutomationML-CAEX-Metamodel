@@ -69,6 +69,7 @@ public class RefSemanticImpl extends CAEXBasicObjectImpl implements RefSemantic 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getCorrespondingAttributePath() {
 		return correspondingAttributePath;
 	}
@@ -78,6 +79,7 @@ public class RefSemanticImpl extends CAEXBasicObjectImpl implements RefSemantic 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCorrespondingAttributePath(String newCorrespondingAttributePath) {
 		String oldCorrespondingAttributePath = correspondingAttributePath;
 		correspondingAttributePath = newCorrespondingAttributePath;
@@ -152,7 +154,7 @@ public class RefSemanticImpl extends CAEXBasicObjectImpl implements RefSemantic 
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (correspondingAttributePath: ");
 		result.append(correspondingAttributePath);
 		result.append(')');

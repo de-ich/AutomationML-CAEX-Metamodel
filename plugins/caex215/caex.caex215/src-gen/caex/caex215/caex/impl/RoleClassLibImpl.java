@@ -66,6 +66,7 @@ public class RoleClassLibImpl extends CAEXObjectImpl implements RoleClassLib {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RoleClass> getRoleClass() {
 		if (roleClass == null) {
 			roleClass = new EObjectContainmentEList<RoleClass>(RoleClass.class, this, CAEXPackage.ROLE_CLASS_LIB__ROLE_CLASS);

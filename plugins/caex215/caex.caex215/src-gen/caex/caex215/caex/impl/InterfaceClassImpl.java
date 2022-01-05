@@ -112,6 +112,7 @@ public class InterfaceClassImpl extends CAEXObjectImpl implements InterfaceClass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getAttribute() {
 		if (attribute == null) {
 			attribute = new EObjectContainmentEList<Attribute>(Attribute.class, this, CAEXPackage.INTERFACE_CLASS__ATTRIBUTE);
@@ -124,6 +125,7 @@ public class InterfaceClassImpl extends CAEXObjectImpl implements InterfaceClass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRefBaseClassPath() {
 		return refBaseClassPath;
 	}
@@ -133,6 +135,7 @@ public class InterfaceClassImpl extends CAEXObjectImpl implements InterfaceClass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefBaseClassPath(String newRefBaseClassPath) {
 		String oldRefBaseClassPath = refBaseClassPath;
 		refBaseClassPath = newRefBaseClassPath;
@@ -145,6 +148,7 @@ public class InterfaceClassImpl extends CAEXObjectImpl implements InterfaceClass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceClass getBaseClass() {
 		if (baseClass != null && baseClass.eIsProxy()) {
 			InternalEObject oldBaseClass = (InternalEObject)baseClass;
@@ -171,6 +175,7 @@ public class InterfaceClassImpl extends CAEXObjectImpl implements InterfaceClass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBaseClass(InterfaceClass newBaseClass) {
 		InterfaceClass oldBaseClass = baseClass;
 		baseClass = newBaseClass;
@@ -183,6 +188,7 @@ public class InterfaceClassImpl extends CAEXObjectImpl implements InterfaceClass
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceClass> getInterfaceClass() {
 		if (interfaceClass == null) {
 			interfaceClass = new EObjectContainmentEList<InterfaceClass>(InterfaceClass.class, this, CAEXPackage.INTERFACE_CLASS__INTERFACE_CLASS);
@@ -307,7 +313,7 @@ public class InterfaceClassImpl extends CAEXObjectImpl implements InterfaceClass
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (refBaseClassPath: ");
 		result.append(refBaseClassPath);
 		result.append(')');

@@ -155,6 +155,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public XMLGregorianCalendar getRevisionDate() {
 		return revisionDate;
 	}
@@ -164,6 +165,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRevisionDate(XMLGregorianCalendar newRevisionDate) {
 		XMLGregorianCalendar oldRevisionDate = revisionDate;
 		revisionDate = newRevisionDate;
@@ -176,6 +178,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOldVersion() {
 		return oldVersion;
 	}
@@ -185,6 +188,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOldVersion(String newOldVersion) {
 		String oldOldVersion = oldVersion;
 		oldVersion = newOldVersion;
@@ -197,6 +201,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNewVersion() {
 		return newVersion;
 	}
@@ -206,6 +211,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNewVersion(String newNewVersion) {
 		String oldNewVersion = newVersion;
 		newVersion = newNewVersion;
@@ -218,6 +224,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAuthorName() {
 		return authorName;
 	}
@@ -227,6 +234,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAuthorName(String newAuthorName) {
 		String oldAuthorName = authorName;
 		authorName = newAuthorName;
@@ -239,6 +247,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getComment() {
 		return comment;
 	}
@@ -248,6 +257,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setComment(String newComment) {
 		String oldComment = comment;
 		comment = newComment;
@@ -362,7 +372,7 @@ public class RevisionImpl extends CAEXBasicObjectImpl implements Revision {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (revisionDate: ");
 		result.append(revisionDate);
 		result.append(", oldVersion: ");

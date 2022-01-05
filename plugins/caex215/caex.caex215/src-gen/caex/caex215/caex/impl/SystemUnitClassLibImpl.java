@@ -66,6 +66,7 @@ public class SystemUnitClassLibImpl extends CAEXObjectImpl implements SystemUnit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SystemUnitClass> getSystemUnitClass() {
 		if (systemUnitClass == null) {
 			systemUnitClass = new EObjectContainmentEList<SystemUnitClass>(SystemUnitClass.class, this, CAEXPackage.SYSTEM_UNIT_CLASS_LIB__SYSTEM_UNIT_CLASS);

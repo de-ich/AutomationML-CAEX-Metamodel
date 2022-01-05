@@ -3287,6 +3287,13 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 			   "namespace", "##targetNamespace"
 		   });
 		addAnnotation
+		  (getSystemUnitClass_RefBaseClassPath(),
+		   source,
+		   new String[] {
+			   "kind", "attribute",
+			   "name", "RefBaseClassPath"
+		   });
+		addAnnotation
 		  (systemUnitFamilyEClass,
 		   source,
 		   new String[] {

@@ -95,6 +95,7 @@ public class SupportedRoleClassImpl extends CAEXBasicObjectImpl implements Suppo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Mapping getMappingObject() {
 		return mappingObject;
 	}
@@ -119,6 +120,7 @@ public class SupportedRoleClassImpl extends CAEXBasicObjectImpl implements Suppo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMappingObject(Mapping newMappingObject) {
 		if (newMappingObject != mappingObject) {
 			NotificationChain msgs = null;
@@ -138,6 +140,7 @@ public class SupportedRoleClassImpl extends CAEXBasicObjectImpl implements Suppo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRefRoleClassPath() {
 		return refRoleClassPath;
 	}
@@ -147,6 +150,7 @@ public class SupportedRoleClassImpl extends CAEXBasicObjectImpl implements Suppo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefRoleClassPath(String newRefRoleClassPath) {
 		String oldRefRoleClassPath = refRoleClassPath;
 		refRoleClassPath = newRefRoleClassPath;
@@ -159,6 +163,7 @@ public class SupportedRoleClassImpl extends CAEXBasicObjectImpl implements Suppo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RoleClass getRoleClass() {
 		if (roleClass != null && roleClass.eIsProxy()) {
 			InternalEObject oldRoleClass = (InternalEObject)roleClass;
@@ -185,6 +190,7 @@ public class SupportedRoleClassImpl extends CAEXBasicObjectImpl implements Suppo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoleClass(RoleClass newRoleClass) {
 		RoleClass oldRoleClass = roleClass;
 		roleClass = newRoleClass;
@@ -294,7 +300,7 @@ public class SupportedRoleClassImpl extends CAEXBasicObjectImpl implements Suppo
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (refRoleClassPath: ");
 		result.append(refRoleClassPath);
 		result.append(')');

@@ -112,6 +112,7 @@ public class OrdinalScaledImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiredMaxValue() {
 		return requiredMaxValue;
 	}
@@ -121,6 +122,7 @@ public class OrdinalScaledImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiredMaxValue(String newRequiredMaxValue) {
 		String oldRequiredMaxValue = requiredMaxValue;
 		requiredMaxValue = newRequiredMaxValue;
@@ -133,6 +135,7 @@ public class OrdinalScaledImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiredValue() {
 		return requiredValue;
 	}
@@ -142,6 +145,7 @@ public class OrdinalScaledImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiredValue(String newRequiredValue) {
 		String oldRequiredValue = requiredValue;
 		requiredValue = newRequiredValue;
@@ -154,6 +158,7 @@ public class OrdinalScaledImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequiredMinValue() {
 		return requiredMinValue;
 	}
@@ -163,6 +168,7 @@ public class OrdinalScaledImpl extends MinimalEObjectImpl.Container implements O
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequiredMinValue(String newRequiredMinValue) {
 		String oldRequiredMinValue = requiredMinValue;
 		requiredMinValue = newRequiredMinValue;
@@ -257,7 +263,7 @@ public class OrdinalScaledImpl extends MinimalEObjectImpl.Container implements O
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (requiredMaxValue: ");
 		result.append(requiredMaxValue);
 		result.append(", requiredValue: ");

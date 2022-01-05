@@ -139,6 +139,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AttributeNameMapping createAttributeNameMapping() {
 		AttributeNameMappingImpl attributeNameMapping = new AttributeNameMappingImpl();
 		return attributeNameMapping;
@@ -149,6 +150,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute createAttribute() {
 		AttributeImpl attribute = new AttributeImpl();
 		return attribute;
@@ -159,6 +161,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AttributeValueRequirement createAttributeValueRequirement() {
 		AttributeValueRequirementImpl attributeValueRequirement = new AttributeValueRequirementImpl();
 		return attributeValueRequirement;
@@ -169,6 +172,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CAEXBasicObject createCAEXBasicObject() {
 		CAEXBasicObjectImpl caexBasicObject = new CAEXBasicObjectImpl();
 		return caexBasicObject;
@@ -179,6 +183,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CAEXFile createCAEXFile() {
 		CAEXFileImpl caexFile = new CAEXFileImpl();
 		return caexFile;
@@ -189,6 +194,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CAEXObject createCAEXObject() {
 		CAEXObjectImpl caexObject = new CAEXObjectImpl();
 		return caexObject;
@@ -199,6 +205,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Copyright createCopyright() {
 		CopyrightImpl copyright = new CopyrightImpl();
 		return copyright;
@@ -209,6 +216,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Description createDescription() {
 		DescriptionImpl description = new DescriptionImpl();
 		return description;
@@ -219,6 +227,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DocumentRoot createDocumentRoot() {
 		DocumentRootImpl documentRoot = new DocumentRootImpl();
 		return documentRoot;
@@ -229,6 +238,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExternalInterface createExternalInterface() {
 		ExternalInterfaceImpl externalInterface = new ExternalInterfaceImpl();
 		return externalInterface;
@@ -239,6 +249,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExternalReference createExternalReference() {
 		ExternalReferenceImpl externalReference = new ExternalReferenceImpl();
 		return externalReference;
@@ -249,6 +260,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InstanceHierarchy createInstanceHierarchy() {
 		InstanceHierarchyImpl instanceHierarchy = new InstanceHierarchyImpl();
 		return instanceHierarchy;
@@ -259,6 +271,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceClassLib createInterfaceClassLib() {
 		InterfaceClassLibImpl interfaceClassLib = new InterfaceClassLibImpl();
 		return interfaceClassLib;
@@ -269,6 +282,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceClass createInterfaceClass() {
 		InterfaceClassImpl interfaceClass = new InterfaceClassImpl();
 		return interfaceClass;
@@ -279,6 +293,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceFamily createInterfaceFamily() {
 		InterfaceFamilyImpl interfaceFamily = new InterfaceFamilyImpl();
 		return interfaceFamily;
@@ -289,6 +304,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceNameMapping createInterfaceNameMapping() {
 		InterfaceNameMappingImpl interfaceNameMapping = new InterfaceNameMappingImpl();
 		return interfaceNameMapping;
@@ -299,6 +315,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InternalElement createInternalElement() {
 		InternalElementImpl internalElement = new InternalElementImpl();
 		return internalElement;
@@ -309,6 +326,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InternalLink createInternalLink() {
 		InternalLinkImpl internalLink = new InternalLinkImpl();
 		return internalLink;
@@ -319,6 +337,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Mapping createMapping() {
 		MappingImpl mapping = new MappingImpl();
 		return mapping;
@@ -329,6 +348,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NominalScaled createNominalScaled() {
 		NominalScaledImpl nominalScaled = new NominalScaledImpl();
 		return nominalScaled;
@@ -339,6 +359,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OrdinalScaled createOrdinalScaled() {
 		OrdinalScaledImpl ordinalScaled = new OrdinalScaledImpl();
 		return ordinalScaled;
@@ -349,6 +370,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RefSemantic createRefSemantic() {
 		RefSemanticImpl refSemantic = new RefSemanticImpl();
 		return refSemantic;
@@ -359,6 +381,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Revision createRevision() {
 		RevisionImpl revision = new RevisionImpl();
 		return revision;
@@ -369,6 +392,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RoleClassLib createRoleClassLib() {
 		RoleClassLibImpl roleClassLib = new RoleClassLibImpl();
 		return roleClassLib;
@@ -379,6 +403,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RoleClass createRoleClass() {
 		RoleClassImpl roleClass = new RoleClassImpl();
 		return roleClass;
@@ -389,6 +414,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RoleFamily createRoleFamily() {
 		RoleFamilyImpl roleFamily = new RoleFamilyImpl();
 		return roleFamily;
@@ -399,6 +425,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RoleRequirements createRoleRequirements() {
 		RoleRequirementsImpl roleRequirements = new RoleRequirementsImpl();
 		return roleRequirements;
@@ -409,6 +436,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SupportedRoleClass createSupportedRoleClass() {
 		SupportedRoleClassImpl supportedRoleClass = new SupportedRoleClassImpl();
 		return supportedRoleClass;
@@ -419,6 +447,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemUnitClassLib createSystemUnitClassLib() {
 		SystemUnitClassLibImpl systemUnitClassLib = new SystemUnitClassLibImpl();
 		return systemUnitClassLib;
@@ -429,6 +458,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemUnitClass createSystemUnitClass() {
 		SystemUnitClassImpl systemUnitClass = new SystemUnitClassImpl();
 		return systemUnitClass;
@@ -439,6 +469,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemUnitFamily createSystemUnitFamily() {
 		SystemUnitFamilyImpl systemUnitFamily = new SystemUnitFamilyImpl();
 		return systemUnitFamily;
@@ -449,6 +480,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnknownType createUnknownType() {
 		UnknownTypeImpl unknownType = new UnknownTypeImpl();
 		return unknownType;
@@ -459,6 +491,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Version createVersion() {
 		VersionImpl version = new VersionImpl();
 		return version;
@@ -469,6 +502,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AdditionalInformation createAdditionalInformation() {
 		AdditionalInformationImpl additionalInformation = new AdditionalInformationImpl();
 		return additionalInformation;
@@ -535,6 +569,7 @@ public class CAEXFactoryImpl extends EFactoryImpl implements CAEXFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CAEXPackage getCAEXPackage() {
 		return (CAEXPackage)getEPackage();
 	}

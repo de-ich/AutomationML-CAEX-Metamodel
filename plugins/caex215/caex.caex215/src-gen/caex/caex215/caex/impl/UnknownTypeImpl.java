@@ -70,6 +70,7 @@ public class UnknownTypeImpl extends MinimalEObjectImpl.Container implements Unk
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRequirements() {
 		return requirements;
 	}
@@ -79,6 +80,7 @@ public class UnknownTypeImpl extends MinimalEObjectImpl.Container implements Unk
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequirements(String newRequirements) {
 		String oldRequirements = requirements;
 		requirements = newRequirements;
@@ -153,7 +155,7 @@ public class UnknownTypeImpl extends MinimalEObjectImpl.Container implements Unk
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (requirements: ");
 		result.append(requirements);
 		result.append(')');

@@ -144,6 +144,7 @@ public interface SystemUnitClass extends CAEXObject {
 	 * @see #setRefBaseClassPath(String)
 	 * @see caex.caex215.caex.CAEXPackage#getSystemUnitClass_RefBaseClassPath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 *        extendedMetaData="kind='attribute' name='RefBaseClassPath'"
 	 * @generated
 	 */
 	String getRefBaseClassPath();
@@ -196,6 +197,7 @@ public interface SystemUnitClass extends CAEXObject {
 	 * @return the value of the '<em>System Unit Class</em>' containment reference list.
 	 * @see caex.caex215.caex.CAEXPackage#getSystemUnitClass_SystemUnitClass()
 	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='SystemUnitClass' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<SystemUnitClass> getSystemUnitClass();

@@ -160,6 +160,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getAttribute() {
 		if (attribute == null) {
 			attribute = new EObjectContainmentEList<Attribute>(Attribute.class, this, CAEXPackage.SYSTEM_UNIT_CLASS__ATTRIBUTE);
@@ -172,6 +173,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceClass> getExternalInterface() {
 		if (externalInterface == null) {
 			externalInterface = new EObjectContainmentEList<InterfaceClass>(InterfaceClass.class, this, CAEXPackage.SYSTEM_UNIT_CLASS__EXTERNAL_INTERFACE);
@@ -184,6 +186,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InternalElement> getInternalElement() {
 		if (internalElement == null) {
 			internalElement = new EObjectContainmentEList<InternalElement>(InternalElement.class, this, CAEXPackage.SYSTEM_UNIT_CLASS__INTERNAL_ELEMENT);
@@ -196,6 +199,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SupportedRoleClass> getSupportedRoleClass() {
 		if (supportedRoleClass == null) {
 			supportedRoleClass = new EObjectContainmentEList<SupportedRoleClass>(SupportedRoleClass.class, this, CAEXPackage.SYSTEM_UNIT_CLASS__SUPPORTED_ROLE_CLASS);
@@ -208,6 +212,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InternalLink> getInternalLink() {
 		if (internalLink == null) {
 			internalLink = new EObjectContainmentEList<InternalLink>(InternalLink.class, this, CAEXPackage.SYSTEM_UNIT_CLASS__INTERNAL_LINK);
@@ -220,6 +225,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRefBaseClassPath() {
 		return refBaseClassPath;
 	}
@@ -229,6 +235,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefBaseClassPath(String newRefBaseClassPath) {
 		String oldRefBaseClassPath = refBaseClassPath;
 		refBaseClassPath = newRefBaseClassPath;
@@ -241,6 +248,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SystemUnitClass getBaseClass() {
 		if (baseClass != null && baseClass.eIsProxy()) {
 			InternalEObject oldBaseClass = (InternalEObject)baseClass;
@@ -267,6 +275,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBaseClass(SystemUnitClass newBaseClass) {
 		SystemUnitClass oldBaseClass = baseClass;
 		baseClass = newBaseClass;
@@ -279,6 +288,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<SystemUnitClass> getSystemUnitClass() {
 		if (systemUnitClass == null) {
 			systemUnitClass = new EObjectContainmentEList<SystemUnitClass>(SystemUnitClass.class, this, CAEXPackage.SYSTEM_UNIT_CLASS__SYSTEM_UNIT_CLASS);
@@ -455,7 +465,7 @@ public class SystemUnitClassImpl extends CAEXObjectImpl implements SystemUnitCla
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (refBaseClassPath: ");
 		result.append(refBaseClassPath);
 		result.append(')');

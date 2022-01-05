@@ -114,6 +114,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRoleInterfaceName() {
 		return roleInterfaceName;
 	}
@@ -123,6 +124,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoleInterfaceName(String newRoleInterfaceName) {
 		String oldRoleInterfaceName = roleInterfaceName;
 		roleInterfaceName = newRoleInterfaceName;
@@ -135,6 +137,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSystemUnitInterfaceName() {
 		return systemUnitInterfaceName;
 	}
@@ -144,6 +147,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystemUnitInterfaceName(String newSystemUnitInterfaceName) {
 		String oldSystemUnitInterfaceName = systemUnitInterfaceName;
 		systemUnitInterfaceName = newSystemUnitInterfaceName;
@@ -156,6 +160,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExternalInterface getRoleInterface() {
 		if (roleInterface != null && roleInterface.eIsProxy()) {
 			InternalEObject oldRoleInterface = (InternalEObject)roleInterface;
@@ -182,6 +187,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoleInterface(ExternalInterface newRoleInterface) {
 		ExternalInterface oldRoleInterface = roleInterface;
 		roleInterface = newRoleInterface;
@@ -194,6 +200,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExternalInterface getSystemUnitInterface() {
 		if (systemUnitInterface != null && systemUnitInterface.eIsProxy()) {
 			InternalEObject oldSystemUnitInterface = (InternalEObject)systemUnitInterface;
@@ -220,6 +227,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystemUnitInterface(ExternalInterface newSystemUnitInterface) {
 		ExternalInterface oldSystemUnitInterface = systemUnitInterface;
 		systemUnitInterface = newSystemUnitInterface;
@@ -326,7 +334,7 @@ public class InterfaceNameMappingImpl extends CAEXBasicObjectImpl implements Int
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (roleInterfaceName: ");
 		result.append(roleInterfaceName);
 		result.append(", systemUnitInterfaceName: ");

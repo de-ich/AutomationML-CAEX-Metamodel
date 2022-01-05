@@ -176,6 +176,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RefSemantic> getRefSemantic() {
 		if (refSemantic == null) {
 			refSemantic = new EObjectContainmentEList<RefSemantic>(RefSemantic.class, this, CAEXPackage.ATTRIBUTE__REF_SEMANTIC);
@@ -188,6 +189,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AttributeValueRequirement> getConstraint() {
 		if (constraint == null) {
 			constraint = new EObjectContainmentEList<AttributeValueRequirement>(AttributeValueRequirement.class, this, CAEXPackage.ATTRIBUTE__CONSTRAINT);
@@ -200,6 +202,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Attribute> getAttribute() {
 		if (attribute == null) {
 			attribute = new EObjectContainmentEList<Attribute>(Attribute.class, this, CAEXPackage.ATTRIBUTE__ATTRIBUTE);
@@ -212,6 +215,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAttributeDataType() {
 		return attributeDataType;
 	}
@@ -221,6 +225,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAttributeDataType(String newAttributeDataType) {
 		String oldAttributeDataType = attributeDataType;
 		attributeDataType = newAttributeDataType;
@@ -233,6 +238,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUnit() {
 		return unit;
 	}
@@ -242,6 +248,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnit(String newUnit) {
 		String oldUnit = unit;
 		unit = newUnit;
@@ -254,6 +261,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -263,6 +271,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -275,6 +284,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefaultValue() {
 		return defaultValue;
 	}
@@ -284,6 +294,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValue(String newDefaultValue) {
 		String oldDefaultValue = defaultValue;
 		defaultValue = newDefaultValue;
@@ -440,7 +451,7 @@ public class AttributeImpl extends CAEXObjectImpl implements Attribute {
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (attributeDataType: ");
 		result.append(attributeDataType);
 		result.append(", unit: ");

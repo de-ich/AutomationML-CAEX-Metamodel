@@ -137,6 +137,7 @@ public interface RoleClass extends CAEXObject {
 	 * @return the value of the '<em>Role Class</em>' containment reference list.
 	 * @see caex.caex215.caex.CAEXPackage#getRoleClass_RoleClass()
 	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='RoleClass' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<RoleClass> getRoleClass();

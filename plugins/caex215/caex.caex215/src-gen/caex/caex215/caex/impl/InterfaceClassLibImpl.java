@@ -66,6 +66,7 @@ public class InterfaceClassLibImpl extends CAEXObjectImpl implements InterfaceCl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceClass> getInterfaceClass() {
 		if (interfaceClass == null) {
 			interfaceClass = new EObjectContainmentEList<InterfaceClass>(InterfaceClass.class, this, CAEXPackage.INTERFACE_CLASS_LIB__INTERFACE_CLASS);

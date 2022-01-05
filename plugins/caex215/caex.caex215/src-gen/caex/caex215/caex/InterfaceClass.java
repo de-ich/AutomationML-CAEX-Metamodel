@@ -116,6 +116,7 @@ public interface InterfaceClass extends CAEXObject {
 	 * @return the value of the '<em>Interface Class</em>' containment reference list.
 	 * @see caex.caex215.caex.CAEXPackage#getInterfaceClass_InterfaceClass()
 	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='InterfaceClass' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InterfaceClass> getInterfaceClass();

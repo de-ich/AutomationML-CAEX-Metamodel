@@ -347,7 +347,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-	 * 
+	 *
 	 * <p>This method is used to initialize {@link CAEXPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
@@ -361,7 +361,8 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 		if (isInited) return (CAEXPackage)EPackage.Registry.INSTANCE.getEPackage(CAEXPackage.eNS_URI);
 
 		// Obtain or create and register package
-		CAEXPackageImpl theCAEXPackage = (CAEXPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof CAEXPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new CAEXPackageImpl());
+		Object registeredCAEXPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		CAEXPackageImpl theCAEXPackage = registeredCAEXPackage instanceof CAEXPackageImpl ? (CAEXPackageImpl)registeredCAEXPackage : new CAEXPackageImpl();
 
 		isInited = true;
 
@@ -378,7 +379,6 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 		// Mark meta-data to indicate it can't be changed
 		theCAEXPackage.freeze();
 
-  
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(CAEXPackage.eNS_URI, theCAEXPackage);
 		return theCAEXPackage;
@@ -389,6 +389,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAttributeNameMapping() {
 		return attributeNameMappingEClass;
 	}
@@ -398,6 +399,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttributeNameMapping_RoleAttributeName() {
 		return (EAttribute)attributeNameMappingEClass.getEStructuralFeatures().get(0);
 	}
@@ -407,6 +409,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttributeNameMapping_SystemUnitAttributeName() {
 		return (EAttribute)attributeNameMappingEClass.getEStructuralFeatures().get(1);
 	}
@@ -416,6 +419,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttributeNameMapping_RoleAttribute() {
 		return (EReference)attributeNameMappingEClass.getEStructuralFeatures().get(2);
 	}
@@ -425,6 +429,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttributeNameMapping_SystemUnitAttribute() {
 		return (EReference)attributeNameMappingEClass.getEStructuralFeatures().get(3);
 	}
@@ -434,6 +439,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAttribute() {
 		return attributeEClass;
 	}
@@ -443,6 +449,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttribute_RefSemantic() {
 		return (EReference)attributeEClass.getEStructuralFeatures().get(0);
 	}
@@ -452,6 +459,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttribute_Constraint() {
 		return (EReference)attributeEClass.getEStructuralFeatures().get(1);
 	}
@@ -461,6 +469,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttribute_Attribute() {
 		return (EReference)attributeEClass.getEStructuralFeatures().get(2);
 	}
@@ -470,6 +479,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_AttributeDataType() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(3);
 	}
@@ -479,6 +489,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Unit() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(4);
 	}
@@ -488,6 +499,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_Value() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(5);
 	}
@@ -497,6 +509,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttribute_DefaultValue() {
 		return (EAttribute)attributeEClass.getEStructuralFeatures().get(6);
 	}
@@ -506,6 +519,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAttributeValueRequirement() {
 		return attributeValueRequirementEClass;
 	}
@@ -515,6 +529,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttributeValueRequirement_OrdinalScaledType() {
 		return (EReference)attributeValueRequirementEClass.getEStructuralFeatures().get(0);
 	}
@@ -524,6 +539,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttributeValueRequirement_NominalScaledType() {
 		return (EReference)attributeValueRequirementEClass.getEStructuralFeatures().get(1);
 	}
@@ -533,6 +549,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAttributeValueRequirement_UnknownType() {
 		return (EReference)attributeValueRequirementEClass.getEStructuralFeatures().get(2);
 	}
@@ -542,6 +559,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAttributeValueRequirement_Name() {
 		return (EAttribute)attributeValueRequirementEClass.getEStructuralFeatures().get(3);
 	}
@@ -551,6 +569,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCAEXBasicObject() {
 		return caexBasicObjectEClass;
 	}
@@ -560,6 +579,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXBasicObject_Description() {
 		return (EReference)caexBasicObjectEClass.getEStructuralFeatures().get(0);
 	}
@@ -569,6 +589,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXBasicObject_Version() {
 		return (EReference)caexBasicObjectEClass.getEStructuralFeatures().get(1);
 	}
@@ -578,6 +599,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXBasicObject_Revision() {
 		return (EReference)caexBasicObjectEClass.getEStructuralFeatures().get(2);
 	}
@@ -587,6 +609,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXBasicObject_Copyright() {
 		return (EReference)caexBasicObjectEClass.getEStructuralFeatures().get(3);
 	}
@@ -596,6 +619,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXBasicObject_AdditionalInformation() {
 		return (EReference)caexBasicObjectEClass.getEStructuralFeatures().get(4);
 	}
@@ -605,6 +629,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCAEXBasicObject_ChangeMode() {
 		return (EAttribute)caexBasicObjectEClass.getEStructuralFeatures().get(5);
 	}
@@ -614,6 +639,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCAEXFile() {
 		return caexFileEClass;
 	}
@@ -623,6 +649,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXFile_ExternalReference() {
 		return (EReference)caexFileEClass.getEStructuralFeatures().get(0);
 	}
@@ -632,6 +659,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXFile_InstanceHierarchy() {
 		return (EReference)caexFileEClass.getEStructuralFeatures().get(1);
 	}
@@ -641,6 +669,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXFile_InterfaceClassLib() {
 		return (EReference)caexFileEClass.getEStructuralFeatures().get(2);
 	}
@@ -650,6 +679,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXFile_RoleClassLib() {
 		return (EReference)caexFileEClass.getEStructuralFeatures().get(3);
 	}
@@ -659,6 +689,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getCAEXFile_SystemUnitClassLib() {
 		return (EReference)caexFileEClass.getEStructuralFeatures().get(4);
 	}
@@ -668,6 +699,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCAEXFile_FileName() {
 		return (EAttribute)caexFileEClass.getEStructuralFeatures().get(5);
 	}
@@ -677,6 +709,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCAEXFile_SchemaVersion() {
 		return (EAttribute)caexFileEClass.getEStructuralFeatures().get(6);
 	}
@@ -686,6 +719,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCAEXObject() {
 		return caexObjectEClass;
 	}
@@ -695,6 +729,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCAEXObject_ID() {
 		return (EAttribute)caexObjectEClass.getEStructuralFeatures().get(0);
 	}
@@ -704,6 +739,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCAEXObject_Name() {
 		return (EAttribute)caexObjectEClass.getEStructuralFeatures().get(1);
 	}
@@ -713,6 +749,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getCopyright() {
 		return copyrightEClass;
 	}
@@ -722,6 +759,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCopyright_Value() {
 		return (EAttribute)copyrightEClass.getEStructuralFeatures().get(0);
 	}
@@ -731,6 +769,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getCopyright_ChangeMode() {
 		return (EAttribute)copyrightEClass.getEStructuralFeatures().get(1);
 	}
@@ -740,6 +779,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDescription() {
 		return descriptionEClass;
 	}
@@ -749,6 +789,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDescription_Value() {
 		return (EAttribute)descriptionEClass.getEStructuralFeatures().get(0);
 	}
@@ -758,6 +799,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDescription_ChangeMode() {
 		return (EAttribute)descriptionEClass.getEStructuralFeatures().get(1);
 	}
@@ -767,6 +809,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDocumentRoot() {
 		return documentRootEClass;
 	}
@@ -776,6 +819,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getDocumentRoot_Mixed() {
 		return (EAttribute)documentRootEClass.getEStructuralFeatures().get(0);
 	}
@@ -785,6 +829,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDocumentRoot_XMLNSPrefixMap() {
 		return (EReference)documentRootEClass.getEStructuralFeatures().get(1);
 	}
@@ -794,6 +839,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDocumentRoot_XSISchemaLocation() {
 		return (EReference)documentRootEClass.getEStructuralFeatures().get(2);
 	}
@@ -803,6 +849,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getDocumentRoot_CAEXFile() {
 		return (EReference)documentRootEClass.getEStructuralFeatures().get(3);
 	}
@@ -812,6 +859,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExternalInterface() {
 		return externalInterfaceEClass;
 	}
@@ -821,6 +869,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getExternalReference() {
 		return externalReferenceEClass;
 	}
@@ -830,6 +879,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExternalReference_Alias() {
 		return (EAttribute)externalReferenceEClass.getEStructuralFeatures().get(0);
 	}
@@ -839,6 +889,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getExternalReference_Path() {
 		return (EAttribute)externalReferenceEClass.getEStructuralFeatures().get(1);
 	}
@@ -848,6 +899,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInstanceHierarchy() {
 		return instanceHierarchyEClass;
 	}
@@ -857,6 +909,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInstanceHierarchy_InternalElement() {
 		return (EReference)instanceHierarchyEClass.getEStructuralFeatures().get(0);
 	}
@@ -866,6 +919,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceClassLib() {
 		return interfaceClassLibEClass;
 	}
@@ -875,6 +929,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceClassLib_InterfaceClass() {
 		return (EReference)interfaceClassLibEClass.getEStructuralFeatures().get(0);
 	}
@@ -884,6 +939,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceClass() {
 		return interfaceClassEClass;
 	}
@@ -893,6 +949,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceClass_Attribute() {
 		return (EReference)interfaceClassEClass.getEStructuralFeatures().get(0);
 	}
@@ -902,6 +959,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceClass_RefBaseClassPath() {
 		return (EAttribute)interfaceClassEClass.getEStructuralFeatures().get(1);
 	}
@@ -911,6 +969,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceClass_BaseClass() {
 		return (EReference)interfaceClassEClass.getEStructuralFeatures().get(2);
 	}
@@ -920,6 +979,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceClass_InterfaceClass() {
 		return (EReference)interfaceClassEClass.getEStructuralFeatures().get(3);
 	}
@@ -929,6 +989,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceFamily() {
 		return interfaceFamilyEClass;
 	}
@@ -938,6 +999,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInterfaceNameMapping() {
 		return interfaceNameMappingEClass;
 	}
@@ -947,6 +1009,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceNameMapping_RoleInterfaceName() {
 		return (EAttribute)interfaceNameMappingEClass.getEStructuralFeatures().get(0);
 	}
@@ -956,6 +1019,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInterfaceNameMapping_SystemUnitInterfaceName() {
 		return (EAttribute)interfaceNameMappingEClass.getEStructuralFeatures().get(1);
 	}
@@ -965,6 +1029,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceNameMapping_RoleInterface() {
 		return (EReference)interfaceNameMappingEClass.getEStructuralFeatures().get(2);
 	}
@@ -974,6 +1039,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInterfaceNameMapping_SystemUnitInterface() {
 		return (EReference)interfaceNameMappingEClass.getEStructuralFeatures().get(3);
 	}
@@ -983,6 +1049,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInternalElement() {
 		return internalElementEClass;
 	}
@@ -992,6 +1059,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInternalElement_RoleRequirements() {
 		return (EReference)internalElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -1001,6 +1069,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInternalElement_MappingObject() {
 		return (EReference)internalElementEClass.getEStructuralFeatures().get(1);
 	}
@@ -1010,6 +1079,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInternalElement_RefBaseSystemUnitPath() {
 		return (EAttribute)internalElementEClass.getEStructuralFeatures().get(2);
 	}
@@ -1019,6 +1089,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInternalElement_BaseSystemUnit() {
 		return (EReference)internalElementEClass.getEStructuralFeatures().get(3);
 	}
@@ -1028,6 +1099,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInternalLink() {
 		return internalLinkEClass;
 	}
@@ -1037,6 +1109,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInternalLink_RefPartnerSideA() {
 		return (EAttribute)internalLinkEClass.getEStructuralFeatures().get(0);
 	}
@@ -1046,6 +1119,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInternalLink_RefPartnerSideB() {
 		return (EAttribute)internalLinkEClass.getEStructuralFeatures().get(1);
 	}
@@ -1055,6 +1129,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInternalLink_PartnerSideA() {
 		return (EReference)internalLinkEClass.getEStructuralFeatures().get(2);
 	}
@@ -1064,6 +1139,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInternalLink_PartnerSideB() {
 		return (EReference)internalLinkEClass.getEStructuralFeatures().get(3);
 	}
@@ -1073,6 +1149,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMapping() {
 		return mappingEClass;
 	}
@@ -1082,6 +1159,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMapping_AttributeNameMapping() {
 		return (EReference)mappingEClass.getEStructuralFeatures().get(0);
 	}
@@ -1091,6 +1169,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getMapping_InterfaceNameMapping() {
 		return (EReference)mappingEClass.getEStructuralFeatures().get(1);
 	}
@@ -1100,6 +1179,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getNominalScaled() {
 		return nominalScaledEClass;
 	}
@@ -1109,6 +1189,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getNominalScaled_RequiredValue() {
 		return (EAttribute)nominalScaledEClass.getEStructuralFeatures().get(0);
 	}
@@ -1118,6 +1199,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getOrdinalScaled() {
 		return ordinalScaledEClass;
 	}
@@ -1127,6 +1209,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOrdinalScaled_RequiredMaxValue() {
 		return (EAttribute)ordinalScaledEClass.getEStructuralFeatures().get(0);
 	}
@@ -1136,6 +1219,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOrdinalScaled_RequiredValue() {
 		return (EAttribute)ordinalScaledEClass.getEStructuralFeatures().get(1);
 	}
@@ -1145,6 +1229,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getOrdinalScaled_RequiredMinValue() {
 		return (EAttribute)ordinalScaledEClass.getEStructuralFeatures().get(2);
 	}
@@ -1154,6 +1239,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRefSemantic() {
 		return refSemanticEClass;
 	}
@@ -1163,6 +1249,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRefSemantic_CorrespondingAttributePath() {
 		return (EAttribute)refSemanticEClass.getEStructuralFeatures().get(0);
 	}
@@ -1172,6 +1259,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRevision() {
 		return revisionEClass;
 	}
@@ -1181,6 +1269,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRevision_RevisionDate() {
 		return (EAttribute)revisionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1190,6 +1279,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRevision_OldVersion() {
 		return (EAttribute)revisionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1199,6 +1289,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRevision_NewVersion() {
 		return (EAttribute)revisionEClass.getEStructuralFeatures().get(2);
 	}
@@ -1208,6 +1299,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRevision_AuthorName() {
 		return (EAttribute)revisionEClass.getEStructuralFeatures().get(3);
 	}
@@ -1217,6 +1309,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRevision_Comment() {
 		return (EAttribute)revisionEClass.getEStructuralFeatures().get(4);
 	}
@@ -1226,6 +1319,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRoleClassLib() {
 		return roleClassLibEClass;
 	}
@@ -1235,6 +1329,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRoleClassLib_RoleClass() {
 		return (EReference)roleClassLibEClass.getEStructuralFeatures().get(0);
 	}
@@ -1244,6 +1339,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRoleClass() {
 		return roleClassEClass;
 	}
@@ -1253,6 +1349,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRoleClass_Attribute() {
 		return (EReference)roleClassEClass.getEStructuralFeatures().get(0);
 	}
@@ -1262,6 +1359,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRoleClass_ExternalInterface() {
 		return (EReference)roleClassEClass.getEStructuralFeatures().get(1);
 	}
@@ -1271,6 +1369,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRoleClass_RefBaseClassPath() {
 		return (EAttribute)roleClassEClass.getEStructuralFeatures().get(2);
 	}
@@ -1280,6 +1379,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRoleClass_BaseClass() {
 		return (EReference)roleClassEClass.getEStructuralFeatures().get(3);
 	}
@@ -1289,6 +1389,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRoleClass_RoleClass() {
 		return (EReference)roleClassEClass.getEStructuralFeatures().get(4);
 	}
@@ -1298,6 +1399,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRoleFamily() {
 		return roleFamilyEClass;
 	}
@@ -1307,6 +1409,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRoleRequirements() {
 		return roleRequirementsEClass;
 	}
@@ -1316,6 +1419,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRoleRequirements_Attribute() {
 		return (EReference)roleRequirementsEClass.getEStructuralFeatures().get(0);
 	}
@@ -1325,6 +1429,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRoleRequirements_ExternalInterface() {
 		return (EReference)roleRequirementsEClass.getEStructuralFeatures().get(1);
 	}
@@ -1334,6 +1439,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRoleRequirements_RefBaseRoleClassPath() {
 		return (EAttribute)roleRequirementsEClass.getEStructuralFeatures().get(2);
 	}
@@ -1343,6 +1449,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRoleRequirements_RoleClass() {
 		return (EReference)roleRequirementsEClass.getEStructuralFeatures().get(3);
 	}
@@ -1352,6 +1459,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSupportedRoleClass() {
 		return supportedRoleClassEClass;
 	}
@@ -1361,6 +1469,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSupportedRoleClass_MappingObject() {
 		return (EReference)supportedRoleClassEClass.getEStructuralFeatures().get(0);
 	}
@@ -1370,6 +1479,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSupportedRoleClass_RefRoleClassPath() {
 		return (EAttribute)supportedRoleClassEClass.getEStructuralFeatures().get(1);
 	}
@@ -1379,6 +1489,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSupportedRoleClass_RoleClass() {
 		return (EReference)supportedRoleClassEClass.getEStructuralFeatures().get(2);
 	}
@@ -1388,6 +1499,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSystemUnitClassLib() {
 		return systemUnitClassLibEClass;
 	}
@@ -1397,6 +1509,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemUnitClassLib_SystemUnitClass() {
 		return (EReference)systemUnitClassLibEClass.getEStructuralFeatures().get(0);
 	}
@@ -1406,6 +1519,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSystemUnitClass() {
 		return systemUnitClassEClass;
 	}
@@ -1415,6 +1529,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemUnitClass_Attribute() {
 		return (EReference)systemUnitClassEClass.getEStructuralFeatures().get(0);
 	}
@@ -1424,6 +1539,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemUnitClass_ExternalInterface() {
 		return (EReference)systemUnitClassEClass.getEStructuralFeatures().get(1);
 	}
@@ -1433,6 +1549,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemUnitClass_InternalElement() {
 		return (EReference)systemUnitClassEClass.getEStructuralFeatures().get(2);
 	}
@@ -1442,6 +1559,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemUnitClass_SupportedRoleClass() {
 		return (EReference)systemUnitClassEClass.getEStructuralFeatures().get(3);
 	}
@@ -1451,6 +1569,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemUnitClass_InternalLink() {
 		return (EReference)systemUnitClassEClass.getEStructuralFeatures().get(4);
 	}
@@ -1460,6 +1579,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSystemUnitClass_RefBaseClassPath() {
 		return (EAttribute)systemUnitClassEClass.getEStructuralFeatures().get(5);
 	}
@@ -1469,6 +1589,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemUnitClass_BaseClass() {
 		return (EReference)systemUnitClassEClass.getEStructuralFeatures().get(6);
 	}
@@ -1478,6 +1599,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSystemUnitClass_SystemUnitClass() {
 		return (EReference)systemUnitClassEClass.getEStructuralFeatures().get(7);
 	}
@@ -1487,6 +1609,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getSystemUnitFamily() {
 		return systemUnitFamilyEClass;
 	}
@@ -1496,6 +1619,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUnknownType() {
 		return unknownTypeEClass;
 	}
@@ -1505,6 +1629,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUnknownType_Requirements() {
 		return (EAttribute)unknownTypeEClass.getEStructuralFeatures().get(0);
 	}
@@ -1514,6 +1639,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVersion() {
 		return versionEClass;
 	}
@@ -1523,6 +1649,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVersion_Value() {
 		return (EAttribute)versionEClass.getEStructuralFeatures().get(0);
 	}
@@ -1532,6 +1659,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVersion_ChangeMode() {
 		return (EAttribute)versionEClass.getEStructuralFeatures().get(1);
 	}
@@ -1541,6 +1669,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAdditionalInformation() {
 		return additionalInformationEClass;
 	}
@@ -1550,6 +1679,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getChangeMode() {
 		return changeModeEEnum;
 	}
@@ -1559,6 +1689,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getAttributeDataType() {
 		return attributeDataTypeEDataType;
 	}
@@ -1568,6 +1699,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EDataType getChangeModeObject() {
 		return changeModeObjectEDataType;
 	}
@@ -1577,6 +1709,7 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CAEXFactory getCAEXFactory() {
 		return (CAEXFactory)getEFactoryInstance();
 	}
@@ -2020,869 +2153,900 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	 * @generated
 	 */
 	protected void createExtendedMetaDataAnnotations() {
-		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation
-		  (this, 
-		   source, 
+		  (this,
+		   source,
 		   new String[] {
-			 "qualified", "false"
-		   });	
+			   "qualified", "false"
+		   });
 		addAnnotation
-		  (attributeNameMappingEClass, 
-		   source, 
+		  (attributeNameMappingEClass,
+		   source,
 		   new String[] {
-			 "name", "AttributeNameMapping",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "AttributeNameMapping",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getAttributeNameMapping_RoleAttributeName(), 
-		   source, 
+		  (getAttributeNameMapping_RoleAttributeName(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RoleAttributeName",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "RoleAttributeName",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttributeNameMapping_SystemUnitAttributeName(), 
-		   source, 
+		  (getAttributeNameMapping_SystemUnitAttributeName(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "SystemUnitAttributeName",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "SystemUnitAttributeName",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (attributeEClass, 
-		   source, 
+		  (attributeEClass,
+		   source,
 		   new String[] {
-			 "name", "AttributeType",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "AttributeType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getAttribute_RefSemantic(), 
-		   source, 
+		  (getAttribute_RefSemantic(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RefSemantic",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "RefSemantic",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttribute_Constraint(), 
-		   source, 
+		  (getAttribute_Constraint(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Constraint",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Constraint",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttribute_Attribute(), 
-		   source, 
+		  (getAttribute_Attribute(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Attribute",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Attribute",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttribute_AttributeDataType(), 
-		   source, 
+		  (getAttribute_AttributeDataType(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "AttributeDataType",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "AttributeDataType",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttribute_Unit(), 
-		   source, 
+		  (getAttribute_Unit(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "Unit",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "Unit",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttribute_Value(), 
-		   source, 
+		  (getAttribute_Value(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Value",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Value",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttribute_DefaultValue(), 
-		   source, 
+		  (getAttribute_DefaultValue(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "DefaultValue",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "DefaultValue",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (attributeValueRequirementEClass, 
-		   source, 
+		  (attributeValueRequirementEClass,
+		   source,
 		   new String[] {
-			 "name", "AttributeValueRequirementType",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "AttributeValueRequirementType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getAttributeValueRequirement_OrdinalScaledType(), 
-		   source, 
+		  (getAttributeValueRequirement_OrdinalScaledType(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "OrdinalScaledType",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "OrdinalScaledType",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttributeValueRequirement_NominalScaledType(), 
-		   source, 
+		  (getAttributeValueRequirement_NominalScaledType(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "NominalScaledType",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "NominalScaledType",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttributeValueRequirement_UnknownType(), 
-		   source, 
+		  (getAttributeValueRequirement_UnknownType(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "UnknownType",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "UnknownType",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getAttributeValueRequirement_Name(), 
-		   source, 
+		  (getAttributeValueRequirement_Name(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "Name",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "Name",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (caexBasicObjectEClass, 
-		   source, 
+		  (caexBasicObjectEClass,
+		   source,
 		   new String[] {
-			 "name", "CAEXBasicObject",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "CAEXBasicObject",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getCAEXBasicObject_Description(), 
-		   source, 
+		  (getCAEXBasicObject_Description(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Description",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Description",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXBasicObject_Version(), 
-		   source, 
+		  (getCAEXBasicObject_Version(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Version",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Version",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXBasicObject_Revision(), 
-		   source, 
+		  (getCAEXBasicObject_Revision(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Revision",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Revision",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXBasicObject_Copyright(), 
-		   source, 
+		  (getCAEXBasicObject_Copyright(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Copyright",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Copyright",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXBasicObject_AdditionalInformation(), 
-		   source, 
+		  (getCAEXBasicObject_AdditionalInformation(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "AdditionalInformation",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "AdditionalInformation",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXBasicObject_ChangeMode(), 
-		   source, 
+		  (getCAEXBasicObject_ChangeMode(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "ChangeMode",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "ChangeMode",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (caexFileEClass, 
-		   source, 
+		  (caexFileEClass,
+		   source,
 		   new String[] {
-			 "name", "CAEXFile",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "CAEXFile",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getCAEXFile_ExternalReference(), 
-		   source, 
+		  (getCAEXFile_ExternalReference(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "ExternalReference",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "ExternalReference",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXFile_InstanceHierarchy(), 
-		   source, 
+		  (getCAEXFile_InstanceHierarchy(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "InstanceHierarchy",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "InstanceHierarchy",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXFile_InterfaceClassLib(), 
-		   source, 
+		  (getCAEXFile_InterfaceClassLib(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "InterfaceClassLib",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "InterfaceClassLib",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXFile_RoleClassLib(), 
-		   source, 
+		  (getCAEXFile_RoleClassLib(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RoleClassLib",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "RoleClassLib",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXFile_SystemUnitClassLib(), 
-		   source, 
+		  (getCAEXFile_SystemUnitClassLib(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "SystemUnitClassLib",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "SystemUnitClassLib",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXFile_FileName(), 
-		   source, 
+		  (getCAEXFile_FileName(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "FileName",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "FileName",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXFile_SchemaVersion(), 
-		   source, 
+		  (getCAEXFile_SchemaVersion(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "SchemaVersion",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "SchemaVersion",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (caexObjectEClass, 
-		   source, 
+		  (caexObjectEClass,
+		   source,
 		   new String[] {
-			 "name", "CAEXObject",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "CAEXObject",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getCAEXObject_ID(), 
-		   source, 
+		  (getCAEXObject_ID(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "ID",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "ID",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getCAEXObject_Name(), 
-		   source, 
+		  (getCAEXObject_Name(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "Name",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "Name",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (copyrightEClass, 
-		   source, 
+		  (copyrightEClass,
+		   source,
 		   new String[] {
-			 "name", "Copyright",
-			 "kind", "simple"
-		   });	
+			   "name", "Copyright",
+			   "kind", "simple"
+		   });
 		addAnnotation
-		  (getCopyright_Value(), 
-		   source, 
+		  (getCopyright_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0",
-			 "kind", "simple"
-		   });	
+			   "name", ":0",
+			   "kind", "simple"
+		   });
 		addAnnotation
-		  (getCopyright_ChangeMode(), 
-		   source, 
+		  (getCopyright_ChangeMode(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "ChangeMode",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "ChangeMode",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (descriptionEClass, 
-		   source, 
+		  (descriptionEClass,
+		   source,
 		   new String[] {
-			 "name", "Description",
-			 "kind", "simple"
-		   });	
+			   "name", "Description",
+			   "kind", "simple"
+		   });
 		addAnnotation
-		  (getDescription_Value(), 
-		   source, 
+		  (getDescription_Value(),
+		   source,
 		   new String[] {
-			 "name", ":0",
-			 "kind", "simple"
-		   });	
+			   "name", ":0",
+			   "kind", "simple"
+		   });
 		addAnnotation
-		  (getDescription_ChangeMode(), 
-		   source, 
+		  (getDescription_ChangeMode(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "ChangeMode",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "ChangeMode",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (documentRootEClass, 
-		   source, 
+		  (documentRootEClass,
+		   source,
 		   new String[] {
-			 "name", "",
-			 "kind", "mixed"
-		   });	
+			   "name", "",
+			   "kind", "mixed"
+		   });
 		addAnnotation
-		  (getDocumentRoot_Mixed(), 
-		   source, 
+		  (getDocumentRoot_Mixed(),
+		   source,
 		   new String[] {
-			 "kind", "elementWildcard",
-			 "name", ":mixed"
-		   });	
+			   "kind", "elementWildcard",
+			   "name", ":mixed"
+		   });
 		addAnnotation
-		  (getDocumentRoot_XMLNSPrefixMap(), 
-		   source, 
+		  (getDocumentRoot_XMLNSPrefixMap(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "xmlns:prefix"
-		   });	
+			   "kind", "attribute",
+			   "name", "xmlns:prefix"
+		   });
 		addAnnotation
-		  (getDocumentRoot_XSISchemaLocation(), 
-		   source, 
+		  (getDocumentRoot_XSISchemaLocation(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "xsi:schemaLocation"
-		   });	
+			   "kind", "attribute",
+			   "name", "xsi:schemaLocation"
+		   });
 		addAnnotation
-		  (getDocumentRoot_CAEXFile(), 
-		   source, 
+		  (getDocumentRoot_CAEXFile(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "CAEXFile",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "CAEXFile",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (externalInterfaceEClass, 
-		   source, 
+		  (externalInterfaceEClass,
+		   source,
 		   new String[] {
-			 "name", "ExternalInterface",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "ExternalInterface",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (externalReferenceEClass, 
-		   source, 
+		  (externalReferenceEClass,
+		   source,
 		   new String[] {
-			 "name", "ExternalReference",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "ExternalReference",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getExternalReference_Alias(), 
-		   source, 
+		  (getExternalReference_Alias(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "Alias",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "Alias",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getExternalReference_Path(), 
-		   source, 
+		  (getExternalReference_Path(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "Path",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "Path",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (instanceHierarchyEClass, 
-		   source, 
+		  (instanceHierarchyEClass,
+		   source,
 		   new String[] {
-			 "name", "InstanceHierarchy",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "InstanceHierarchy",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getInstanceHierarchy_InternalElement(), 
-		   source, 
+		  (getInstanceHierarchy_InternalElement(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "InternalElement",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "InternalElement",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (interfaceClassLibEClass, 
-		   source, 
+		  (interfaceClassLibEClass,
+		   source,
 		   new String[] {
-			 "name", "InterfaceClassLib",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "InterfaceClassLib",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getInterfaceClassLib_InterfaceClass(), 
-		   source, 
+		  (getInterfaceClassLib_InterfaceClass(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "InterfaceClass",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "InterfaceClass",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (interfaceClassEClass, 
-		   source, 
+		  (interfaceClassEClass,
+		   source,
 		   new String[] {
-			 "name", "InterfaceClassType",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "InterfaceClassType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getInterfaceClass_Attribute(), 
-		   source, 
+		  (getInterfaceClass_Attribute(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Attribute",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Attribute",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getInterfaceClass_RefBaseClassPath(), 
-		   source, 
+		  (getInterfaceClass_RefBaseClassPath(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RefBaseClassPath",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "RefBaseClassPath",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (interfaceFamilyEClass, 
-		   source, 
+		  (getInterfaceClass_InterfaceClass(),
+		   source,
 		   new String[] {
-			 "name", "InterfaceFamilyType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "InterfaceClass",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (interfaceNameMappingEClass, 
-		   source, 
+		  (interfaceFamilyEClass,
+		   source,
 		   new String[] {
-			 "name", "InterfaceNameMapping",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "InterfaceFamilyType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getInterfaceNameMapping_RoleInterfaceName(), 
-		   source, 
+		  (interfaceNameMappingEClass,
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RoleInterfaceName",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "InterfaceNameMapping",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getInterfaceNameMapping_SystemUnitInterfaceName(), 
-		   source, 
+		  (getInterfaceNameMapping_RoleInterfaceName(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "SystemUnitInterfaceName",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "RoleInterfaceName",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (internalElementEClass, 
-		   source, 
+		  (getInterfaceNameMapping_SystemUnitInterfaceName(),
+		   source,
 		   new String[] {
-			 "name", "InternalElementType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "attribute",
+			   "name", "SystemUnitInterfaceName",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getInternalElement_RoleRequirements(), 
-		   source, 
+		  (internalElementEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RoleRequirements",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "InternalElementType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getInternalElement_MappingObject(), 
-		   source, 
+		  (getInternalElement_RoleRequirements(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "MappingObject",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "RoleRequirements",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getInternalElement_RefBaseSystemUnitPath(), 
-		   source, 
+		  (getInternalElement_MappingObject(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RefBaseSystemUnitPath",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "MappingObject",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (internalLinkEClass, 
-		   source, 
+		  (getInternalElement_RefBaseSystemUnitPath(),
+		   source,
 		   new String[] {
-			 "name", "InternalLink",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "attribute",
+			   "name", "RefBaseSystemUnitPath",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getInternalLink_RefPartnerSideA(), 
-		   source, 
+		  (internalLinkEClass,
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RefPartnerSideA",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "InternalLink",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getInternalLink_RefPartnerSideB(), 
-		   source, 
+		  (getInternalLink_RefPartnerSideA(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RefPartnerSideB",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "RefPartnerSideA",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (mappingEClass, 
-		   source, 
+		  (getInternalLink_RefPartnerSideB(),
+		   source,
 		   new String[] {
-			 "name", "MappingType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "attribute",
+			   "name", "RefPartnerSideB",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getMapping_AttributeNameMapping(), 
-		   source, 
+		  (mappingEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "AttributeNameMapping",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "MappingType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getMapping_InterfaceNameMapping(), 
-		   source, 
+		  (getMapping_AttributeNameMapping(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "InterfaceNameMapping",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "AttributeNameMapping",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (nominalScaledEClass, 
-		   source, 
+		  (getMapping_InterfaceNameMapping(),
+		   source,
 		   new String[] {
-			 "name", "NominalScaledType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "InterfaceNameMapping",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getNominalScaled_RequiredValue(), 
-		   source, 
+		  (nominalScaledEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RequiredValue",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "NominalScaledType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (ordinalScaledEClass, 
-		   source, 
+		  (getNominalScaled_RequiredValue(),
+		   source,
 		   new String[] {
-			 "name", "OrdinalScaledType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "RequiredValue",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getOrdinalScaled_RequiredMaxValue(), 
-		   source, 
+		  (ordinalScaledEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RequiredMaxValue",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "OrdinalScaledType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getOrdinalScaled_RequiredValue(), 
-		   source, 
+		  (getOrdinalScaled_RequiredMaxValue(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RequiredValue",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "RequiredMaxValue",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getOrdinalScaled_RequiredMinValue(), 
-		   source, 
+		  (getOrdinalScaled_RequiredValue(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RequiredMinValue",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "RequiredValue",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (refSemanticEClass, 
-		   source, 
+		  (getOrdinalScaled_RequiredMinValue(),
+		   source,
 		   new String[] {
-			 "name", "RefSemantic",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "RequiredMinValue",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRefSemantic_CorrespondingAttributePath(), 
-		   source, 
+		  (refSemanticEClass,
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "CorrespondingAttributePath",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "RefSemantic",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (revisionEClass, 
-		   source, 
+		  (getRefSemantic_CorrespondingAttributePath(),
+		   source,
 		   new String[] {
-			 "name", "Revision",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "attribute",
+			   "name", "CorrespondingAttributePath",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRevision_RevisionDate(), 
-		   source, 
+		  (revisionEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RevisionDate",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "Revision",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getRevision_OldVersion(), 
-		   source, 
+		  (getRevision_RevisionDate(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "OldVersion",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "RevisionDate",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRevision_NewVersion(), 
-		   source, 
+		  (getRevision_OldVersion(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "NewVersion",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "OldVersion",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRevision_AuthorName(), 
-		   source, 
+		  (getRevision_NewVersion(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "AuthorName",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "NewVersion",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRevision_Comment(), 
-		   source, 
+		  (getRevision_AuthorName(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Comment",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "AuthorName",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (roleClassLibEClass, 
-		   source, 
+		  (getRevision_Comment(),
+		   source,
 		   new String[] {
-			 "name", "RoleClassLib",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "Comment",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRoleClassLib_RoleClass(), 
-		   source, 
+		  (roleClassLibEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "RoleClass",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "RoleClassLib",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (roleClassEClass, 
-		   source, 
+		  (getRoleClassLib_RoleClass(),
+		   source,
 		   new String[] {
-			 "name", "RoleClassType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "RoleClass",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRoleClass_Attribute(), 
-		   source, 
+		  (roleClassEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Attribute",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "RoleClassType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getRoleClass_ExternalInterface(), 
-		   source, 
+		  (getRoleClass_Attribute(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "ExternalInterface",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Attribute",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRoleClass_RefBaseClassPath(), 
-		   source, 
+		  (getRoleClass_ExternalInterface(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RefBaseClassPath",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "ExternalInterface",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (roleFamilyEClass, 
-		   source, 
+		  (getRoleClass_RefBaseClassPath(),
+		   source,
 		   new String[] {
-			 "name", "RoleFamilyType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "attribute",
+			   "name", "RefBaseClassPath",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (roleRequirementsEClass, 
-		   source, 
+		  (getRoleClass_RoleClass(),
+		   source,
 		   new String[] {
-			 "name", "RoleRequirements",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "RoleClass",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getRoleRequirements_Attribute(), 
-		   source, 
+		  (roleFamilyEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Attribute",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "RoleFamilyType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getRoleRequirements_ExternalInterface(), 
-		   source, 
+		  (roleRequirementsEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "ExternalInterface",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "RoleRequirements",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getRoleRequirements_RefBaseRoleClassPath(), 
-		   source, 
+		  (getRoleRequirements_Attribute(),
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RefBaseRoleClassPath",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Attribute",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (supportedRoleClassEClass, 
-		   source, 
+		  (getRoleRequirements_ExternalInterface(),
+		   source,
 		   new String[] {
-			 "name", "SupportedRoleClass",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "ExternalInterface",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getSupportedRoleClass_MappingObject(), 
-		   source, 
+		  (getRoleRequirements_RefBaseRoleClassPath(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "MappingObject",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "RefBaseRoleClassPath",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getSupportedRoleClass_RefRoleClassPath(), 
-		   source, 
+		  (supportedRoleClassEClass,
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "RefRoleClassPath",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "SupportedRoleClass",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (systemUnitClassLibEClass, 
-		   source, 
+		  (getSupportedRoleClass_MappingObject(),
+		   source,
 		   new String[] {
-			 "name", "SystemUnitClassLib",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "MappingObject",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getSystemUnitClassLib_SystemUnitClass(), 
-		   source, 
+		  (getSupportedRoleClass_RefRoleClassPath(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "SystemUnitClass",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "RefRoleClassPath",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (systemUnitClassEClass, 
-		   source, 
+		  (systemUnitClassLibEClass,
+		   source,
 		   new String[] {
-			 "name", "SystemUnitClassType",
-			 "kind", "elementOnly"
-		   });	
+			   "name", "SystemUnitClassLib",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getSystemUnitClass_Attribute(), 
-		   source, 
+		  (getSystemUnitClassLib_SystemUnitClass(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Attribute",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "SystemUnitClass",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getSystemUnitClass_ExternalInterface(), 
-		   source, 
+		  (systemUnitClassEClass,
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "ExternalInterface",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "name", "SystemUnitClassType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getSystemUnitClass_InternalElement(), 
-		   source, 
+		  (getSystemUnitClass_Attribute(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "InternalElement",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "Attribute",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getSystemUnitClass_SupportedRoleClass(), 
-		   source, 
+		  (getSystemUnitClass_ExternalInterface(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "SupportedRoleClass",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "ExternalInterface",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getSystemUnitClass_InternalLink(), 
-		   source, 
+		  (getSystemUnitClass_InternalElement(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "InternalLink",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "element",
+			   "name", "InternalElement",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (systemUnitFamilyEClass, 
-		   source, 
+		  (getSystemUnitClass_SupportedRoleClass(),
+		   source,
 		   new String[] {
-			 "name", "SystemUnitFamilyType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "SupportedRoleClass",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (unknownTypeEClass, 
-		   source, 
+		  (getSystemUnitClass_InternalLink(),
+		   source,
 		   new String[] {
-			 "name", "UnknownType",
-			 "kind", "elementOnly"
-		   });	
+			   "kind", "element",
+			   "name", "InternalLink",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getUnknownType_Requirements(), 
-		   source, 
+		  (getSystemUnitClass_RefBaseClassPath(),
+		   source,
 		   new String[] {
-			 "kind", "element",
-			 "name", "Requirements",
-			 "namespace", "##targetNamespace"
-		   });	
+			   "kind", "attribute",
+			   "name", "RefBaseClassPath"
+		   });
 		addAnnotation
-		  (versionEClass, 
-		   source, 
+		  (getSystemUnitClass_SystemUnitClass(),
+		   source,
 		   new String[] {
-			 "name", "Version",
-			 "kind", "simple"
-		   });	
+			   "kind", "element",
+			   "name", "SystemUnitClass",
+			   "namespace", "##targetNamespace"
+		   });
 		addAnnotation
-		  (getVersion_Value(), 
-		   source, 
+		  (systemUnitFamilyEClass,
+		   source,
 		   new String[] {
-			 "name", ":0",
-			 "kind", "simple"
-		   });	
+			   "name", "SystemUnitFamilyType",
+			   "kind", "elementOnly"
+		   });
 		addAnnotation
-		  (getVersion_ChangeMode(), 
-		   source, 
+		  (unknownTypeEClass,
+		   source,
 		   new String[] {
-			 "kind", "attribute",
-			 "name", "ChangeMode",
-			 "namespace", "##targetNamespace"
+			   "name", "UnknownType",
+			   "kind", "elementOnly"
+		   });
+		addAnnotation
+		  (getUnknownType_Requirements(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "Requirements",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
+		  (versionEClass,
+		   source,
+		   new String[] {
+			   "name", "Version",
+			   "kind", "simple"
+		   });
+		addAnnotation
+		  (getVersion_Value(),
+		   source,
+		   new String[] {
+			   "name", ":0",
+			   "kind", "simple"
+		   });
+		addAnnotation
+		  (getVersion_ChangeMode(),
+		   source,
+		   new String[] {
+			   "kind", "attribute",
+			   "name", "ChangeMode",
+			   "namespace", "##targetNamespace"
 		   });
 	}
 

@@ -114,6 +114,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getRoleAttributeName() {
 		return roleAttributeName;
 	}
@@ -123,6 +124,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoleAttributeName(String newRoleAttributeName) {
 		String oldRoleAttributeName = roleAttributeName;
 		roleAttributeName = newRoleAttributeName;
@@ -135,6 +137,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSystemUnitAttributeName() {
 		return systemUnitAttributeName;
 	}
@@ -144,6 +147,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystemUnitAttributeName(String newSystemUnitAttributeName) {
 		String oldSystemUnitAttributeName = systemUnitAttributeName;
 		systemUnitAttributeName = newSystemUnitAttributeName;
@@ -156,6 +160,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute getRoleAttribute() {
 		if (roleAttribute != null && roleAttribute.eIsProxy()) {
 			InternalEObject oldRoleAttribute = (InternalEObject)roleAttribute;
@@ -182,6 +187,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRoleAttribute(Attribute newRoleAttribute) {
 		Attribute oldRoleAttribute = roleAttribute;
 		roleAttribute = newRoleAttribute;
@@ -194,6 +200,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Attribute getSystemUnitAttribute() {
 		if (systemUnitAttribute != null && systemUnitAttribute.eIsProxy()) {
 			InternalEObject oldSystemUnitAttribute = (InternalEObject)systemUnitAttribute;
@@ -220,6 +227,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSystemUnitAttribute(Attribute newSystemUnitAttribute) {
 		Attribute oldSystemUnitAttribute = systemUnitAttribute;
 		systemUnitAttribute = newSystemUnitAttribute;
@@ -326,7 +334,7 @@ public class AttributeNameMappingImpl extends CAEXBasicObjectImpl implements Att
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
-		StringBuffer result = new StringBuffer(super.toString());
+		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (roleAttributeName: ");
 		result.append(roleAttributeName);
 		result.append(", systemUnitAttributeName: ");
