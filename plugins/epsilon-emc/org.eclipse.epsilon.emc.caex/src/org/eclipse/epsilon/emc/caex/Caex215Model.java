@@ -33,8 +33,8 @@ public class Caex215Model extends CaexBaseModel {
 	}
 	
 	@Override
-	protected void setLoadOptions(EPackage.Registry registry) {
-		super.setLoadOptions(registry);
+	protected void setLoadOptions() {
+		super.setLoadOptions();
 		
 		// As CAEX 2.15 files do not specify a namespace, we need a custom MissingPackageHandler to make sure the CAEX package is used for 
 		// the default namespace (see https://stackoverflow.com/a/45441670)
