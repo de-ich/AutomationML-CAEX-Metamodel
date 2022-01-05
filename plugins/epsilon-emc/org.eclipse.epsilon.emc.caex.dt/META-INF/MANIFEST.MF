@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CAEX Epsilon EMC Connector DT
+Bundle-SymbolicName: org.eclipse.epsilon.emc.caex.dt;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: caex.caex215.epsilon.emc.dt
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.epsilon.common.dt;bundle-version="2.3.0",
+ org.eclipse.epsilon.emc.caex;bundle-version="1.0.0",
+ org.eclipse.epsilon.emc.emf;bundle-version="2.3.0"
+Export-Package: org.eclipse.epsilon.emc.caex.dt

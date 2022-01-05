@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.epsilon.common.dt.modelType">
+      <modelType
+            class="org.eclipse.epsilon.emc.caex.Caex215Model"
+            dialog="org.eclipse.epsilon.emc.caex.dt.Caex215ModelConfigurationDialog"
+            icon="images/CAEXModelFile.gif"
+            label="CAEX 2.15 Model"
+            stable="true"
+            type="CAEX215">
+      </modelType>
+      <modelType
+            class="org.eclipse.epsilon.emc.caex.Caex30Model"
+            dialog="org.eclipse.epsilon.emc.caex.dt.Caex30ModelConfigurationDialog"
+            icon="images/CAEXModelFile.gif"
+            label="CAEX 3.0 Model"
+            stable="true"
+            type="CAEX30">
+      </modelType>
+   </extension>
+
+</plugin>
