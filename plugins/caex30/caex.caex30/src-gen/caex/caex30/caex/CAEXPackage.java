@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see caex.caex30.caex.CAEXFactory
  * @model kind="package"
- *        extendedMetaData="qualified='false'"
  * @generated
  */
 public interface CAEXPackage extends EPackage {

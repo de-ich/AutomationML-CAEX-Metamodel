@@ -2426,12 +2426,6 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 	protected void createExtendedMetaDataAnnotations() {
 		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";
 		addAnnotation
-		  (this,
-		   source,
-		   new String[] {
-			   "qualified", "false"
-		   });
-		addAnnotation
 		  (attributeDataTypeEDataType,
 		   source,
 		   new String[] {
