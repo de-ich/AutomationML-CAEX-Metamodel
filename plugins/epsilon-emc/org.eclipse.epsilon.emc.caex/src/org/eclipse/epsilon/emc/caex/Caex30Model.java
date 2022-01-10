@@ -6,6 +6,7 @@ import org.eclipse.epsilon.common.util.StringProperties;
 import org.eclipse.epsilon.eol.exceptions.models.EolModelLoadingException;
 import org.eclipse.epsilon.eol.models.IRelativePathResolver;
 
+import caex.caex30.caex.CAEXObject;
 import caex.caex30.caex.impl.CAEXPackageImpl;
 
 public class Caex30Model extends CaexBaseModel {
@@ -30,4 +31,13 @@ public class Caex30Model extends CaexBaseModel {
 		registry.put(CAEXPackageImpl.eNS_URI, CAEXPackageImpl.eINSTANCE);
 	}	
 	
+	@Override
+	public String getElementId(Object instance) {
+		if (instance instanceof CAEXObject && ((CAEXObject) instance).getID() != null) {
+			return ((CAEXObject) instance).getID();
+		}
+		
+		return super.getElementId(instance);
+		
+	}
 }

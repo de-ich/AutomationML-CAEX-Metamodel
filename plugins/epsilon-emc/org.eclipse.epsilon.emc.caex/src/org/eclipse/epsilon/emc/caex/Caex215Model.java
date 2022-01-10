@@ -1,6 +1,7 @@
 package org.eclipse.epsilon.emc.caex;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EPackage.Registry;
 import org.eclipse.emf.ecore.xmi.XMLResource;
@@ -8,6 +9,7 @@ import org.eclipse.epsilon.common.util.StringProperties;
 import org.eclipse.epsilon.eol.exceptions.models.EolModelLoadingException;
 import org.eclipse.epsilon.eol.models.IRelativePathResolver;
 
+import caex.caex215.caex.CAEXObject;
 import caex.caex215.caex.impl.CAEXPackageImpl;
 
 public class Caex215Model extends CaexBaseModel {
@@ -47,4 +49,13 @@ public class Caex215Model extends CaexBaseModel {
 		putResourceLoadOption(XMLResource.OPTION_MISSING_PACKAGE_HANDLER, mph);
 	}	
 	
+	@Override
+	public String getElementId(Object instance) {
+		if (instance instanceof CAEXObject && ((CAEXObject) instance).getID() != null) {
+			return ((CAEXObject) instance).getID();
+		}
+		
+		return super.getElementId(instance);
+		
+	}
 }
