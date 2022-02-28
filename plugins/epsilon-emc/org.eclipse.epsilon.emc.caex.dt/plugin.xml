@@ -19,6 +19,22 @@
             stable="true"
             type="CAEX30">
       </modelType>
+      <modelType
+            class="org.eclipse.epsilon.emc.caex.AutomationML2Model"
+            dialog="org.eclipse.epsilon.emc.caex.dt.AutomationML2ModelConfigurationDialog"
+            icon="images/CAEXModelFile.gif"
+            label="AutomationML Model/Container (based on CAEX 3.0)"
+            stable="true"
+            type="AutomationML2">
+      </modelType>
+      <modelType
+            class="org.eclipse.epsilon.emc.caex.AutomationML2Model"
+            dialog="org.eclipse.epsilon.emc.caex.dt.AutomationML1ModelConfigurationDialog"
+            icon="images/CAEXModelFile.gif"
+            label="AutomationML Model/Container (based on CAEX 2.15)"
+            stable="true"
+            type="AutomationML1">
+      </modelType>
    </extension>
 
 </plugin>
