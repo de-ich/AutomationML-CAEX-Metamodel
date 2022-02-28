@@ -269,7 +269,13 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalInformation"
-        upperBound="-1" eType="#//AdditionalInformation" containment="true"/>
+        upperBound="-1" eType="#//AdditionalInformation" containment="true">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="kind" value="element"/>
+        <details key="name" value="AdditionalInformation"/>
+        <details key="namespace" value="##targetNamespace"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CAEXFile" eSuperTypes="#//CAEXBasicObject">
     <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">

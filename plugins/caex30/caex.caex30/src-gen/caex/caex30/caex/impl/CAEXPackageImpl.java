@@ -2636,6 +2636,14 @@ public class CAEXPackageImpl extends EPackageImpl implements CAEXPackage {
 			   "namespace", "##targetNamespace"
 		   });
 		addAnnotation
+		  (getCAEXBasicObject_AdditionalInformation(),
+		   source,
+		   new String[] {
+			   "kind", "element",
+			   "name", "AdditionalInformation",
+			   "namespace", "##targetNamespace"
+		   });
+		addAnnotation
 		  (caexFileEClass,
 		   source,
 		   new String[] {

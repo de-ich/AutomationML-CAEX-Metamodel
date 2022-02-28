@@ -215,6 +215,7 @@ public interface CAEXBasicObject extends EObject {
 	 * @return the value of the '<em>Additional Information</em>' containment reference list.
 	 * @see caex.caex30.caex.CAEXPackage#getCAEXBasicObject_AdditionalInformation()
 	 * @model containment="true"
+	 *        extendedMetaData="kind='element' name='AdditionalInformation' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<AdditionalInformation> getAdditionalInformation();
